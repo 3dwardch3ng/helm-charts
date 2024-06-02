@@ -1,0 +1,4 @@
+server:
+  serviceType: NodePort
+  httpNodePort: 30080
+  httpsNodePort: 30443
