@@ -7,12 +7,12 @@ metadata:
 spec:
   storageClassName: manual
   capacity:
-    storage: {size of device}Gi
+    storage: 32Gi
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   hostPath:
-    path: "/mnt/prometheus"
+    path: "/mnt/nfs/prometheus"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -24,4 +24,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: {size of device}Gi
+      storage: 32Gi
