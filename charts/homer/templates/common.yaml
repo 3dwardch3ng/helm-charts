@@ -1,0 +1,20 @@
+{{/* Append the hardcoded settings */}}
+{{- define "homer.harcodedValues" -}}
+persistence:
+  {{- if .Values.configMaps.config.enabled }}
+    {{/* Append the configMap volume to the volumes */}}
+  config:
+    enabled: true
+    type: configMap
+    name: {{ include "bjw-s.common.lib.chart.names.fullname" . }}-config
+    mountPath: /www/assets/config.yml
+    subPath: config.yml
+  {{- end }}
+  assets:
+    enabled: true
+    mountPath: /www/assets
+{{- end -}}
+{{- $_ := mergeOverwrite .Values (include "homer.harcodedValues" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "bjw-s.common.loader.all" . }}

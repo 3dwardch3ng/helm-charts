@@ -13,10 +13,16 @@ persistence:
     enabled: true
     retain: true
     mountPath: /mnt/nfs/adguardhome/conf
-  data:
+  work:
     enabled: true
     retain: true
     mountPath: /mnt/nfs/adguardhome/work
+
+volumeMounts:
+  - name: config
+    mountPath: /opt/adguardhome/conf
+  - name: work
+    mountPath: /opt/adguardhome/work
 
 config: |
   http:
