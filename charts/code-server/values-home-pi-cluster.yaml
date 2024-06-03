@@ -1,0 +1,23 @@
+server:
+  httpNodePort: 38443
+
+environment:
+  name: home-pi-cluster
+  TZ: Australia/Sydney
+  HASHED_PASSWORD:
+    valueFrom:
+      secretKeyRef:
+        name: home-pi-cluster
+        key: codeServerPasswordHash
+  SUDO_PASSWORD_HASH:
+    valueFrom:
+      secretKeyRef:
+        name: home-pi-cluster
+        key: codeServerSudoPasswordHash
+
+volumes:
+  - name: config
+    hostPath:
+      path: /mnt/nfs/code-server/config
+      type: Directory
+

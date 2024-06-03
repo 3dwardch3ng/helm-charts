@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "bjw-s.common.lib.chart.names.name" . }}
+  labels:
+    {{ include "bjw-s.common.lib.chart.names.name" . }}/env: {{ .Values.environment.name }}
+    {{ include "bjw-s.common.lib.chart.names.name" . }}/service: {{ include "bjw-s.common.lib.chart.names.fullname" . }}
+    {{ include "bjw-s.common.lib.chart.names.name" . }}/version: {{ .Chart.version }}
+    {{ include "bjw-s.common.lib.chart.names.name" . }}/appVersion: {{ .Chart.appVersion }}
+data:
+  PUID: {{ .Values.environment.PUID  | quote }}
+  PGID: {{ .Values.environment.PGID  | quote }}
+  TZ: {{ .Values.environment.TZ  | quote }}
+  {{- if .Values.environment.PASSWORD }}
+  PASSWORD: {{ .Values.environment.PASSWORD  | quote }}
+  {{- end }}
+  {{- if .Values.environment.HASHED_PASSWORD }}
+  HASHED_PASSWORD: {{ .Values.environment.HASHED_PASSWORD  | quote }}
+  {{- end }}
+  {{- if .Values.environment.SUDO_PASSWORD }}
+  SUDO_PASSWORD: {{ .Values.environment.SUDO_PASSWORD  | quote }}
+  {{- end }}
+  {{- if .Values.environment.SUDO_PASSWORD_HASHED }}
+  SUDO_PASSWORD_HASHED: {{ .Values.environment.SUDO_PASSWORD_HASHED  | quote }}
+  {{- end }}
+  {{- if .Values.environment.PROXY_DOMAIN }}
+  PROXY_DOMAIN: {{ .Values.environment.PROXY_DOMAIN  | quote }}
+  {{- end }}
+  {{- if .Values.environment.DEFAULT_WORKSPACE }}
+  PROXY_DOMAIN: {{ .Values.environment.DEFAULT_WORKSPACE  | quote }}
+  {{- end }}
