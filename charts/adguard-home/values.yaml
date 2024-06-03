@@ -1,0 +1,12 @@
+env:
+  TZ: "Australia/Sydney"
+
+persistence:
+  config:
+    enabled: true
+    retain: true
+    mountPath: /mnt/nfs/adguardhome/conf
+  data:
+    enabled: true
+    retain: true
+    mountPath: /mnt/nfs/adguardhome/work
