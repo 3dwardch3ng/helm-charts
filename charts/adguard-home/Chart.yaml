@@ -2,8 +2,8 @@ apiVersion: v2
 name: adguard-home
 description: Free and open source, powerful network-wide ads & trackers blocking DNS server.
 
-home: https://charts.gabe565.com/charts/adguard-home/
-icon: https://raw.githubusercontent.com/gabe565/charts/main/charts/adguard-home/icon.svg
+home: https://https://3dwardch3ng.github.io/pi-cluster-k8s-helm-charts/adguard-home/
+icon: https://raw.githubusercontent.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/main/charts/adguard-home/icon.svg
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -18,7 +18,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.3.22
+version: 0.0.1
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
@@ -26,7 +26,6 @@ version: 0.3.22
 # It is recommended to use it with quotes.
 appVersion: "v0.107.50"
 
-# renovate datasource=docker depName=adguard/adguardhome
 kubeVersion: ">=1.22.0-0"
 keywords:
   - adblock
@@ -41,9 +40,9 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update adguard/adguardhome docker tag to v0.107.50
+      description: Create the AdGuard Home chart
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/AdguardTeam/AdGuardHome
     - name: Chart Source
-      url: https://github.com/gabe565/charts/tree/main/charts/adguard-home
+      url: https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/tree/main/charts/adguard-home

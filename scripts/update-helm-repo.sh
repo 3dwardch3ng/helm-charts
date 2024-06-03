@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+## bjw-s common chart library Helm Chart Repo
+helm repo add bjw-s https://bjw-s.github.io/helm-charts
+
 ## Argo Helm Chart Repo
 helm repo add argo https://argoproj.github.io/argo-helm
 

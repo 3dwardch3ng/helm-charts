@@ -5,6 +5,9 @@
 # https://github.com/bjw-s/helm-charts/blob/a081de5/charts/library/common/values.yaml
 #
 
+environment:
+  name: default
+
 image:
   # -- Image repository
   repository: adguard/adguardhome
