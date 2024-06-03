@@ -1,3 +1,6 @@
 #!/usr/bin/bash
+set -e
 
-helm upgrade --install ../charts/homer -n homer --create-namespace --values ../charts/homer/values-home-pi-cluster.yaml
+tag=$1
+
+./deploy.sh homer home-pi-cluster ${tag}

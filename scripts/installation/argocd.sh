@@ -1,3 +1,6 @@
 #!/usr/bin/bash
+set -e
 
-helm install argocd -n argocd -f values.yaml argo/argocd
+tag=$1
+
+./deploy.sh argocd home-pi-cluster ${tag}

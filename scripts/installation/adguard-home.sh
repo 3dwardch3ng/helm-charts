@@ -1,3 +1,6 @@
 #!/usr/bin/bash
+set -e
 
-helm upgrade --install ../charts/adguard-home -n adguard-home --create-namespace --values ../charts/adguard-home/values-home-pi-cluster.yaml
+tag=$1
+
+./deploy.sh adguard-home home-pi-cluster ${tag}
