@@ -1,3 +1,6 @@
+environment:
+  name: home-pi-cluster
+
 image:
   # -- image tag
   tag: v24.05.1
