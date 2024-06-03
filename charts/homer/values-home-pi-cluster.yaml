@@ -1,0 +1,13 @@
+image:
+  # -- image tag
+  tag: v24.05.1
+
+volumes:
+  - name: homer-assets
+    hostPath:
+      path: /mnt/nfs/homer/assets
+      type: Directory
+
+volumeMounts:
+  - mountPath: /www/assets
+    name: homer-assets
