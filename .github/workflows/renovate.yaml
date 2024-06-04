@@ -75,9 +75,11 @@ jobs:
       - name: Set type to patch
         if: contains(steps.pr.outputs.labels, 'patch') || contains(steps.pr.outputs.labels, 'digest')
         run: echo TYPE=patch >>$GITHUB_ENV
+
       - name: Set type to minor
         if: contains(steps.pr.outputs.labels, 'major') || contains(steps.pr.outputs.labels, 'minor')
         run: echo TYPE=minor >>$GITHUB_ENV
+
       - name: Update chart version
         if: "!contains(steps.pr.outputs.labels, 'skip-version-bump')"
         run: |
@@ -86,6 +88,7 @@ jobs:
 
       - name: Install helm-docs
         uses: gabe565/setup-helm-docs-action@v1
+
       - name: Generate Helm docs
         run: |
           set -eu
