@@ -11,7 +11,7 @@ The VS Code running on a remote server, accessible through the browser.
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/code-server/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=code-server&version=0.1.0)**
+[here](https://github.com/3dwardCh3nG/helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=code-server&version=0.1.0)**
 
 ## Source Code
 
@@ -34,13 +34,13 @@ To install the chart with the release name `code-server`
 ### OCI (Recommended)
 
 ```console
-helm install code-server oci://ghcr.io/3dwardCh3nG/pi-cluster-k8s-helm-charts/code-server
+helm install code-server oci://ghcr.io/edeedeeed/helm-charts/code-server
 ```
 
 ### Traditional
 
 ```console
-helm repo add 3dwardCh3nG https://charts.gabe565.com
+helm repo add 3dwardCh3nG https://pages.edward.sydney/helm-charts/
 helm repo update
 helm install code-server 3dwardCh3nG/code-server
 ```

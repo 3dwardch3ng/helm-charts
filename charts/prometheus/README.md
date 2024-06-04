@@ -11,7 +11,7 @@ Prometheus is a monitoring system and time series database.
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/prometheus>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=prometheus&version=25.21.0)**
+[here](https://github.com/3dwardCh3nG/helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=prometheus&version=25.21.0)**
 
 ## Requirements
 
@@ -28,13 +28,13 @@ To install the chart with the release name `prometheus`
 ### OCI (Recommended)
 
 ```console
-helm install prometheus oci://ghcr.io/3dwardCh3nG/pi-cluster-k8s-helm-charts/prometheus
+helm install prometheus oci://ghcr.io/edeedeeed/helm-charts/prometheus
 ```
 
 ### Traditional
 
 ```console
-helm repo add 3dwardCh3nG https://charts.gabe565.com
+helm repo add 3dwardCh3nG https://pages.edward.sydney/helm-charts/
 helm repo update
 helm install prometheus 3dwardCh3nG/prometheus
 ```

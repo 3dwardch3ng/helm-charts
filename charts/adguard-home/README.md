@@ -11,7 +11,7 @@ Free and open source, powerful network-wide ads & trackers blocking DNS server.
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/adguard-home>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=adguard-home&version=0.1.0)**
+[here](https://github.com/3dwardCh3nG/helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=adguard-home&version=0.1.0)**
 
 ## Source Code
 
@@ -34,13 +34,13 @@ To install the chart with the release name `adguard-home`
 ### OCI (Recommended)
 
 ```console
-helm install adguard-home oci://ghcr.io/3dwardCh3nG/pi-cluster-k8s-helm-charts/adguard-home
+helm install adguard-home oci://ghcr.io/edeedeeed/helm-charts/adguard-home
 ```
 
 ### Traditional
 
 ```console
-helm repo add 3dwardCh3nG https://charts.gabe565.com
+helm repo add 3dwardCh3nG https://pages.edward.sydney/helm-charts/
 helm repo update
 helm install adguard-home 3dwardCh3nG/adguard-home
 ```
