@@ -40,31 +40,6 @@ jobs:
             sed -i '/^<img .* alt=".* logo"/,+1d' "$f"
           done
 
-      - name: Install chart-releaser
-        uses: helm/chart-releaser-action@v1.5.0
-        with:
-          install_only: true
-
-      - name: Install Helm
-        uses: azure/setup-helm@v4
-        env:
-          GITHUB_TOKEN: "${{ steps.app-token.outputs.token }}"
-
-      - name: Package charts
-        id: package_charts
-        run: |
-          changed_charts=""
-          for dir in charts/*; do
-            chart_name="$(basename "$dir")"
-            version="$(yq '.version' "$dir/Chart.yaml")"
-            if ! git rev-parse "$chart_name-${version#v}" &>/dev/null; then
-              echo "Packaging chart $chart_name..."
-              cr package --package-path=.cr-release-packages "$dir"
-              changed_charts+="$chart_name,"
-            fi
-          done
-          echo "changed_charts=${changed_charts%,}" >> $GITHUB_OUTPUT
-
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
         with:
