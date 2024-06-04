@@ -31,7 +31,7 @@ jobs:
 
       - name: Add Helm repos
         run: |
-          ./scripts/add-helm-repos.sh
+          ./scripts/update-helm-repo.sh
 
       - name: Remove readme images
         run: |
