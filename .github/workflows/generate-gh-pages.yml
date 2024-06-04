@@ -122,8 +122,8 @@ jobs:
       - name: Checkout Helm index
         uses: actions/checkout@v4
         with:
-          path: helm-index
-          ref: refs/heads/helm-index
+          path: gh-pages
+          ref: refs/heads/gh-pages
 
       - name: Download docs artifact
         uses: actions/download-artifact@v4
@@ -134,7 +134,7 @@ jobs:
         run: tar -xzvf docs.tar.gz
 
       - name: Move Helm index to docs
-        run: mv helm-index/* site
+        run: mv gh-pages/* site
 
       - name: Upload release artifact
         uses: actions/upload-pages-artifact@v3
