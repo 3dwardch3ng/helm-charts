@@ -3,7 +3,7 @@ name: code-server
 description: The VS Code running on a remote server, accessible through the browser.
 
 home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/code-server/
-icon: https://www.gravatar.com/avatar/43bbe74c9925ba1647aab2bbe6638f18?s=120&r=g&d=404
+icon: https://www.svgrepo.com/download/303535/visual-studio-code-logo.svg
 
 # A chart can be either an 'application' or a 'library' chart.
 #

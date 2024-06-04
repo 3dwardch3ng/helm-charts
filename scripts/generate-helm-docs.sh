@@ -55,5 +55,5 @@ for chart in $charts; do (
     --template-files="$(basename "$readme_config_template")" \
     --badge-style=flat \
     --chart-search-root="$root" \
-    --chart-to-generate="$chart_directory"
+    --chart-to-generate="$chart_dir"
 ) done

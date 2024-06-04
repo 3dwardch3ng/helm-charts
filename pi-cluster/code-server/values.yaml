@@ -20,4 +20,3 @@ volumes:
     hostPath:
       path: /mnt/nfs/code-server/config
       type: Directory
-

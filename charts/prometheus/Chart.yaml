@@ -2,6 +2,9 @@ apiVersion: v2
 name: prometheus
 description: Prometheus is a monitoring system and time series database.
 
+home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/prometheus
+icon: https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg
+
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
