@@ -1,10 +1,8 @@
 apiVersion: v2
 name: code-server
 description: The VS Code running on a remote server, accessible through the browser.
-
 home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/code-server/
 icon: https://www.svgrepo.com/download/303535/visual-studio-code-logo.svg
-
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -14,12 +12,10 @@ icon: https://www.svgrepo.com/download/303535/visual-studio-code-logo.svg
 # a dependency of application charts to inject those utilities and functions into the rendering
 # pipeline. Library charts do not define any templates and therefore cannot be deployed.
 type: application
-
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 1.0.0
-
 # renovate datasource=docker depName=lscr.io/linuxserver/code-server
 
 # This is the version number of the application being deployed. This version number should be
@@ -27,7 +23,6 @@ version: 1.0.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "4.89.1-ls214"
-
 kubeVersion: ">=1.22.0-0"
 keywords:
   - code-server
@@ -42,7 +37,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Create the Code Server chart
+      description: Renovate/charts
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/linuxserver/docker-code-server

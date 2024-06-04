@@ -1,10 +1,8 @@
 apiVersion: v2
 name: homer
 description: A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
-
 home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/homer/
 icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg
-
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -14,12 +12,10 @@ icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets
 # a dependency of application charts to inject those utilities and functions into the rendering
 # pipeline. Library charts do not define any templates and therefore cannot be deployed.
 type: application
-
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.1.0
-
 # renovate datasource=docker depName=ghcr.io/bastienwirtz/homer
 
 # This is the version number of the application being deployed. This version number should be
@@ -27,7 +23,6 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "v24.05.1"
-
 kubeVersion: ">=1.22.0-0"
 keywords:
   - homer
@@ -43,7 +38,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update ghcr.io/bastienwirtz/homer docker tag to v24
+      description: Renovate/charts
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/bastienwirtz/homer
