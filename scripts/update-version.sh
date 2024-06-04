@@ -49,5 +49,5 @@ for chart in "${CHARTS[@]}"; do (
   current="$(yq '.version' "$meta_file")"
   yq -i '.version |= (split(".") | '"$SCRIPT"' | join("."))' "$meta_file"
   new="$(yq '.version' "$meta_file")"
-  echo "Updated $(basename "$chart") from v$current to v$new"
+  echo "Updated $(basename "$chart") from $current to $new"
 ) done
