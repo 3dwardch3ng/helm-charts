@@ -28,4 +28,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Renovate/charts
+      description: Fix pipeline, pages, docs
