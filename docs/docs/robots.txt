@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://charts.gabe565.com/sitemap.xml
+Sitemap: https://pages.edward.sydney/helm-charts/sitemap.xml
