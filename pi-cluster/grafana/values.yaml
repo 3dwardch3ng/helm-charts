@@ -1,0 +1,8 @@
+environment:
+  name: home-pi-cluster
+
+grafana:
+  service:
+    enabled: true
+    type: NodePort
+    nodePort: 30180

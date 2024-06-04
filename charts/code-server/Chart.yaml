@@ -2,6 +2,9 @@ apiVersion: v2
 name: code-server
 description: The VS Code running on a remote server, accessible through the browser.
 
+home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/code-server/
+icon: https://www.gravatar.com/avatar/43bbe74c9925ba1647aab2bbe6638f18?s=120&r=g&d=404
+
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -17,14 +20,14 @@ type: application
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.1.0
 
+# renovate datasource=docker depName=lscr.io/linuxserver/code-server
+
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "4.89.1-ls214"
 
-home: https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/tree/main/charts/code-server/
-icon: https://www.gravatar.com/avatar/43bbe74c9925ba1647aab2bbe6638f18?s=120&r=g&d=404
 kubeVersion: ">=1.22.0-0"
 keywords:
   - code-server
@@ -44,4 +47,4 @@ annotations:
     - name: App Source
       url: https://github.com/linuxserver/docker-code-server
     - name: Chart Source
-      url: https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/tree/main/charts/code-server
+      url: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/code-server

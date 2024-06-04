@@ -16,6 +16,8 @@ type: application
 # to the chart and its templates, including the app version.
 version: 25.21.0
 
+# renovate datasource=docker depName=prometheus-community.github.io/helm-charts
+
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.

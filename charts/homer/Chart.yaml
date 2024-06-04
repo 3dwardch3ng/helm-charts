@@ -2,6 +2,9 @@ apiVersion: v2
 name: homer
 description: A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
 
+home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/homer/
+icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg
+
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -17,14 +20,14 @@ type: application
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.1.0
 
+# renovate datasource=docker depName=ghcr.io/bastienwirtz/homer
+
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "v24.05.1"
 
-home: https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/tree/main/charts/homer/
-icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg
 kubeVersion: ">=1.22.0-0"
 keywords:
   - homer
@@ -40,9 +43,9 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Create the AdGuard Home chart
+      description: Update ghcr.io/bastienwirtz/homer docker tag to v24
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/bastienwirtz/homer
     - name: Chart Source
-      url: https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/tree/main/charts/homer
+      url: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/homer
