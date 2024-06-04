@@ -92,7 +92,7 @@ jobs:
   deploy-site:
     name: Deploy Site
     runs-on: ubuntu-latest
-    needs: [ release-charts, build-docs ]
+    needs: [ build-index, build-docs ]
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
