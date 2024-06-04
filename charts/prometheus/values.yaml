@@ -1,0 +1,21 @@
+environment:
+  name: default
+
+prometheus:
+  alertmanager:
+    enabled: true
+  prometheus-pushgateway:
+    enabled: true
+  configmapReload:
+    prometheus:
+      enabled: true
+  server:
+    nodeSelector: {}
+    securityContext:
+      runAsUser: 65534
+      runAsNonRoot: true
+      runAsGroup: 65534
+      fsGroup: 65534
+    persistentVolume:
+      enabled: true
+      existingClaim: ""
