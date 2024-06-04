@@ -1,10 +1,8 @@
 apiVersion: v2
 name: adguard-home
 description: Free and open source, powerful network-wide ads & trackers blocking DNS server.
-
-home: https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/tree/main/charts/adguard-home
-icon: https://raw.githubusercontent.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/main/charts/adguard-home/icon.svg
-
+home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/adguard-home
+icon: https://raw.githubusercontent.com/3dwardCh3nG/helm-charts/main/charts/adguard-home/icon.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -14,18 +12,17 @@ icon: https://raw.githubusercontent.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/m
 # a dependency of application charts to inject those utilities and functions into the rendering
 # pipeline. Library charts do not define any templates and therefore cannot be deployed.
 type: application
-
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.1.0
+# renovate datasource=docker depName=adguard/adguardhome
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "v0.107.50"
-
 kubeVersion: ">=1.22.0-0"
 keywords:
   - adblock
@@ -40,9 +37,9 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Create the AdGuard Home chart
+      description: Renovate/charts
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/AdguardTeam/AdGuardHome
     - name: Chart Source
-      url: https://github.com/3dwardCh3nG/pi-cluster-k8s-helm-charts/tree/main/charts/adguard-home
+      url: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/adguard-home
