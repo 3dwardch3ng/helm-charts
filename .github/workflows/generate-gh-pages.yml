@@ -1,0 +1,47 @@
+name: Generate GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-index:
+    name: Build Index
+    runs-on: ubuntu-latest
+    env:
+      AUTHOR_USER: helm-chart-bot
+      AUTHOR_EMAIL: helm-chart-bot[bot]@users.noreply.github.com
+    steps:
+      - name: Generate Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_APP_PRIVATE_KEY }}
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+        env:
+          GITHUB_TOKEN: "${{ steps.app-token.outputs.token }}"
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.6.0
+        with:
+          config: ./docs/cr.yaml
+          skip_packaging: true
+          skip_existing: true
+          skip_upload: true
+          mark_as_latest: true
+          packages_with_index: false
+        env:
+          CR_TOKEN: "${{ steps.app-token.outputs.token }}"
