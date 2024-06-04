@@ -23,7 +23,8 @@ sed -i '' '/^'"$charts_header"'$/,$d' "$charts_summary_file"
   echo
   echo "| Chart | Description |"
   echo "| ----- | ----------- |"
-  for chart_yaml in "${stable_charts[@]}"; do
+  # shellcheck disable=SC2068
+  for chart_yaml in ${stable_charts[@]}; do
     if ! git ls-files --error-unmatch "$chart_yaml" &>/dev/null; then continue; fi
     IFS=$'\t' read -r chart_name chart_description chart_icon < <(yq eval -o=tsv '[.name, .description, .icon // ""]' "$chart_yaml")
     if [[ -n "$chart_icon" ]]; then

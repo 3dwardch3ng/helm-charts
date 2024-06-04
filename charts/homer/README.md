@@ -11,7 +11,7 @@ A dead simple static HOMepage for your servER to keep your services on hand, fro
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/homer/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/3dwardCh3nG/helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=homer&version=0.1.0)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=homer&version=0.1.0)**
 
 ## Source Code
 
@@ -34,13 +34,13 @@ To install the chart with the release name `homer`
 ### OCI (Recommended)
 
 ```console
-helm install homer oci://ghcr.io/edeedeeed/helm-charts/homer
+helm install homer oci://ghcr.io/3dwardCh3nG/helm-charts/homer
 ```
 
 ### Traditional
 
 ```console
-helm repo add 3dwardCh3nG https://pages.edward.sydney/helm-charts/
+helm repo add 3dwardCh3nG https://helm-charts.edward.sydney/
 helm repo update
 helm install homer 3dwardCh3nG/homer
 ```

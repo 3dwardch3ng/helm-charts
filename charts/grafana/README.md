@@ -11,7 +11,7 @@ The leading tool for querying and visualizing time series and metrics.
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/grafana>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://github.com/3dwardCh3nG/helm-charts/issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=grafana&version=7.3.11)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=grafana&version=7.3.11)**
 
 ## Requirements
 
@@ -28,13 +28,13 @@ To install the chart with the release name `grafana`
 ### OCI (Recommended)
 
 ```console
-helm install grafana oci://ghcr.io/edeedeeed/helm-charts/grafana
+helm install grafana oci://ghcr.io/3dwardCh3nG/helm-charts/grafana
 ```
 
 ### Traditional
 
 ```console
-helm repo add 3dwardCh3nG https://pages.edward.sydney/helm-charts/
+helm repo add 3dwardCh3nG https://helm-charts.edward.sydney/
 helm repo update
 helm install grafana 3dwardCh3nG/grafana
 ```
