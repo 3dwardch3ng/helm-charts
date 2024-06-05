@@ -14,13 +14,13 @@ icon: https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_lo
 type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 25.21.0
+version: 0.1.1
 # renovate datasource=docker depName=prometheus-community.github.io/helm-charts
 
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-appVersion: "v2.52.0"
+appVersion: "25.21.0"
 dependencies:
   - name: prometheus
     version: 25.21.0
@@ -28,4 +28,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Fix pipeline, pages, docs
+      description: Update dependency versions

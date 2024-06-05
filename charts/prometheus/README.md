@@ -2,16 +2,16 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg" align="right" width="92" alt="prometheus logo">
 
-![Version: 25.21.0](https://img.shields.io/badge/Version-25.21.0-informational?style=flat)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: v2.52.0](https://img.shields.io/badge/AppVersion-v2.52.0-informational?style=flat)
+![AppVersion: 25.21.0](https://img.shields.io/badge/AppVersion-25.21.0-informational?style=flat)
 
 Prometheus is a monitoring system and time series database.
 
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/prometheus>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=prometheus&version=25.21.0)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=prometheus&version=0.1.1)**
 
 ## Requirements
 

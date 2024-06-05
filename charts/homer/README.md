@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg" align="right" width="92" alt="homer logo">
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: v24.05.1](https://img.shields.io/badge/AppVersion-v24.05.1-informational?style=flat)
 
@@ -11,7 +11,7 @@ A dead simple static HOMepage for your servER to keep your services on hand, fro
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/homer/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=homer&version=0.1.0)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=homer&version=0.1.1)**
 
 ## Source Code
 
@@ -25,7 +25,7 @@ Kubernetes: `>=1.22.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| <https://bjw-s.github.io/helm-charts> | common | 1.5.1 |
+| <https://bjw-s.github.io/helm-charts> | common | 3.2.1 |
 
 ## Installing the Chart
 
@@ -58,7 +58,7 @@ The command removes all the Kubernetes components associated with the chart **in
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](https://github.com/bjw-s/helm-charts/tree/a081de5/charts/library/common/values.yaml) from the [bjw-s common library](https://github.com/bjw-s/helm-charts/tree/a081de5/charts/library/common).
+Other values may be used from the [values.yaml](https://github.com/bjw-s/helm-charts/tree/main/charts/library/common/values.yaml) from the [bjw-s common library](https://github.com/bjw-s/helm-charts/tree/main/charts/library/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
@@ -80,7 +80,7 @@ N/A
 
 ## Values
 
-**Important**: When deploying an application Helm chart you can add more values from the bjw-s common library chart [here](https://github.com/bjw-s/helm-charts/tree/a081de5/charts/library/common)
+**Important**: When deploying an application Helm chart you can add more values from the bjw-s common library chart [here](https://github.com/bjw-s/helm-charts/tree/main/charts/library/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|

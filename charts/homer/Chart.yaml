@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.0
+version: 0.1.1
 # renovate datasource=docker depName=ghcr.io/bastienwirtz/homer
 
 # This is the version number of the application being deployed. This version number should be
@@ -32,13 +32,13 @@ keywords:
 dependencies:
   - name: common
     repository: https://bjw-s.github.io/helm-charts
-    version: 1.5.1
+    version: 3.2.1
 sources:
   - https://github.com/bastienwirtz/homer
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Fix pipeline, pages, docs
+      description: Update dependency versions
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/bastienwirtz/homer
