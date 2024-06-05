@@ -2,7 +2,7 @@
 
 <img src="https://www.svgrepo.com/download/303535/visual-studio-code-logo.svg" align="right" width="92" alt="code-server logo">
 
-![Version: 1.0.2](https://img.shields.io/badge/Version-1.0.2-informational?style=flat)
+![Version: 1.0.3](https://img.shields.io/badge/Version-1.0.3-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: 4.89.1-ls214](https://img.shields.io/badge/AppVersion-4.89.1--ls214-informational?style=flat)
 
@@ -11,7 +11,7 @@ The VS Code running on a remote server, accessible through the browser.
 **Homepage:** <https://github.com/edeedeeed/helm-charts/tree/main/charts/code-server/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=code-server&version=1.0.2)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=code-server&version=1.0.3)**
 
 ## Source Code
 

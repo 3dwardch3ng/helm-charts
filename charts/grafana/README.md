@@ -2,7 +2,7 @@
 
 <img src="https://docs.checkmk.com/latest/images/grafana_logo.png" align="right" width="92" alt="grafana logo">
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat)
+![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: 8.0.0](https://img.shields.io/badge/AppVersion-8.0.0-informational?style=flat)
 
@@ -11,7 +11,7 @@ The leading tool for querying and visualizing time series and metrics.
 **Homepage:** <https://github.com/edeedeeed/helm-charts/tree/main/charts/grafana>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=grafana&version=0.1.2)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=grafana&version=0.1.3)**
 
 ## Requirements
 
