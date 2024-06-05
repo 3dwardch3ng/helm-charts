@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg" align="right" width="92" alt="homer logo">
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat)
+![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: v24.05.1](https://img.shields.io/badge/AppVersion-v24.05.1-informational?style=flat)
 
@@ -11,7 +11,7 @@ A dead simple static HOMepage for your servER to keep your services on hand, fro
 **Homepage:** <https://github.com/edwardCh3nG/helm-charts/tree/main/charts/homer/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edwardCh3nG&labels=bug&template=bug_report.yaml&name=homer&version=0.1.1)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=edwardCh3nG&labels=bug&template=bug_report.yaml&name=homer&version=0.1.2)**
 
 ## Source Code
 
