@@ -8,10 +8,10 @@
 
 Prometheus is a monitoring system and time series database.
 
-**Homepage:** <https://github.com/edeedeeed/helm-charts/tree/main/charts/prometheus>
+**Homepage:** <https://github.com/3dwardch3ng/helm-charts/tree/main/charts/prometheus>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=prometheus&version=0.1.3)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardch3ng&labels=bug&template=bug_report.yaml&name=prometheus&version=0.1.3)**
 
 ## Requirements
 
@@ -28,15 +28,15 @@ To install the chart with the release name `prometheus`
 ### OCI (Recommended)
 
 ```console
-helm install prometheus oci://ghcr.io/edeedeeed/helm-charts/prometheus
+helm install prometheus oci://ghcr.io/3dwardch3ng/helm-charts/prometheus
 ```
 
 ### Traditional
 
 ```console
-helm repo add edeedeeed https://helm-charts.edward.sydney/
+helm repo add 3dwardch3ng https://helm-charts.edward.sydney/
 helm repo update
-helm install prometheus edeedeeed/prometheus
+helm install prometheus 3dwardch3ng/prometheus
 ```
 
 ## Uninstalling the Chart
@@ -59,13 +59,13 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 helm install prometheus \
   --set env.TZ="America/New York" \
-    edeedeeed/prometheus
+    3dwardch3ng/prometheus
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install prometheus edeedeeed/prometheus -f values.yaml
+helm install prometheus 3dwardch3ng/prometheus -f values.yaml
 ```
 
 ## Custom configuration

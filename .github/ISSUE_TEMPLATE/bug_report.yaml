@@ -1,7 +1,7 @@
 name: Bug Report
 description: File a bug report
 labels: ["bug"]
-assignees: edeedeeed
+assignees: 3dwardch3ng
 body:
   - type: markdown
     attributes:

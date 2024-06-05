@@ -1,7 +1,7 @@
 apiVersion: v2
 name: homer
 description: A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
-home: https://github.com/edeedeeed/helm-charts/tree/main/charts/homer/
+home: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/homer/
 icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -38,9 +38,9 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upload GH cache
+      description: update charts
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/bastienwirtz/homer
     - name: Chart Source
-      url: https://github.com/edeedeeed/helm-charts/tree/main/charts/homer
+      url: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/homer

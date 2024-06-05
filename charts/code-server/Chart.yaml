@@ -1,7 +1,7 @@
 apiVersion: v2
 name: code-server
 description: The VS Code running on a remote server, accessible through the browser.
-home: https://github.com/edeedeeed/helm-charts/tree/main/charts/code-server/
+home: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/code-server/
 icon: https://www.svgrepo.com/download/303535/visual-studio-code-logo.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -37,9 +37,9 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upload GH cache
+      description: update charts
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/linuxserver/docker-code-server
     - name: Chart Source
-      url: https://github.com/edeedeeed/helm-charts/tree/main/charts/code-server
+      url: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/code-server
