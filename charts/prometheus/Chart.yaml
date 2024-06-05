@@ -14,7 +14,7 @@ icon: https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_lo
 type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 0.1.0
+version: 0.1.1
 # renovate datasource=docker depName=prometheus-community.github.io/helm-charts
 
 # incremented each time you make changes to the application. Versions are not expected to
@@ -28,4 +28,4 @@ dependencies:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Fix pipeline, pages, docs
+      description: Update dependency versions

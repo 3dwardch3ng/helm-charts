@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/3dwardCh3nG/helm-charts/main/charts/adguard-home/icon.svg" align="right" width="92" alt="adguard-home logo">
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: v0.107.50](https://img.shields.io/badge/AppVersion-v0.107.50-informational?style=flat)
 
@@ -11,7 +11,7 @@ Free and open source, powerful network-wide ads & trackers blocking DNS server.
 **Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/adguard-home>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=adguard-home&version=0.1.0)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=adguard-home&version=0.1.1)**
 
 ## Source Code
 
