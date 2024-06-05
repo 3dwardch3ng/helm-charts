@@ -1,7 +1,7 @@
 apiVersion: v2
 name: homer
 description: A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
-home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/homer/
+home: https://github.com/edwardCh3nG/helm-charts/tree/main/charts/homer/
 icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.1
+version: 0.1.2
 # renovate datasource=docker depName=ghcr.io/bastienwirtz/homer
 
 # This is the version number of the application being deployed. This version number should be
@@ -38,9 +38,9 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update dependency versions
+      description: update pipeline
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/bastienwirtz/homer
     - name: Chart Source
-      url: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/homer
+      url: https://github.com/edwardCh3nG/helm-charts/tree/main/charts/homer

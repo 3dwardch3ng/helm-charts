@@ -1,11 +1,11 @@
-site_name: 3dwardCh3nG Helm Charts
+site_name: edwardCh3nG Helm Charts
 site_url: https://helm-charts.edward.sydney/
 site_author: Edward Cheng
 site_description: >-
   A collection of Helm charts.
 
-repo_name: !ENV [REPO_NAME, "3dwardCh3nG/helm-charts"]
-repo_url: !ENV [REPO_URL, "https://github.com/3dwardCh3nG/helm-charts"]
+repo_name: !ENV [REPO_NAME, "edwardCh3nG/helm-charts"]
+repo_url: !ENV [REPO_URL, "https://github.com/edwardCh3nG/helm-charts"]
 
 theme:
   name: material

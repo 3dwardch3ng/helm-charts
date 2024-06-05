@@ -2,16 +2,16 @@
 
 <img src="https://docs.checkmk.com/latest/images/grafana_logo.png" align="right" width="92" alt="grafana logo">
 
-![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat)
+![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: 8.0.0](https://img.shields.io/badge/AppVersion-8.0.0-informational?style=flat)
 
 The leading tool for querying and visualizing time series and metrics.
 
-**Homepage:** <https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/grafana>
+**Homepage:** <https://github.com/edwardCh3nG/helm-charts/tree/main/charts/grafana>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardCh3nG&labels=bug&template=bug_report.yaml&name=grafana&version=0.1.1)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=edwardCh3nG&labels=bug&template=bug_report.yaml&name=grafana&version=0.1.2)**
 
 ## Requirements
 
@@ -28,15 +28,15 @@ To install the chart with the release name `grafana`
 ### OCI (Recommended)
 
 ```console
-helm install grafana oci://ghcr.io/3dwardCh3nG/helm-charts/grafana
+helm install grafana oci://ghcr.io/edwardCh3nG/helm-charts/grafana
 ```
 
 ### Traditional
 
 ```console
-helm repo add 3dwardCh3nG https://helm-charts.edward.sydney/
+helm repo add edwardCh3nG https://helm-charts.edward.sydney/
 helm repo update
-helm install grafana 3dwardCh3nG/grafana
+helm install grafana edwardCh3nG/grafana
 ```
 
 ## Uninstalling the Chart
@@ -59,13 +59,13 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 helm install grafana \
   --set env.TZ="America/New York" \
-    3dwardCh3nG/grafana
+    edwardCh3nG/grafana
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install grafana 3dwardCh3nG/grafana -f values.yaml
+helm install grafana edwardCh3nG/grafana -f values.yaml
 ```
 
 ## Custom configuration
