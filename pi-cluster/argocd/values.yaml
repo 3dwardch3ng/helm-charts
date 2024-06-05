@@ -2,6 +2,5 @@ environment:
   name: home-pi-cluster
 
 server:
-  serviceType: NodePort
-  httpNodePort: 30080
-  httpsNodePort: 30443
+  service:
+    type: NodePort
