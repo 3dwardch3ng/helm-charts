@@ -67,6 +67,7 @@ jobs:
             fi
           done
           echo "changed_charts=${changed_charts%,}" >> $GITHUB_OUTPUT
+          cr index -r helm-charts --owner $GITHUB_REPOSITORY_OWNER --pages-branch helm-index --push
 
       - name: Compress
         run: tar -czvf cr-release-packages.tar.gz -C .cr-release-packages .
