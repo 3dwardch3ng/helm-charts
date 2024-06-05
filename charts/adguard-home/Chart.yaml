@@ -1,8 +1,8 @@
 apiVersion: v2
 name: adguard-home
 description: Free and open source, powerful network-wide ads & trackers blocking DNS server.
-home: https://github.com/edeedeeed/helm-charts/tree/main/charts/adguard-home
-icon: https://raw.githubusercontent.com/edeedeeed/helm-charts/main/charts/adguard-home/icon.svg
+home: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/adguard-home
+icon: https://raw.githubusercontent.com/3dwardch3ng/helm-charts/main/charts/adguard-home/icon.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -42,4 +42,4 @@ annotations:
     - name: App Source
       url: https://github.com/AdguardTeam/AdGuardHome
     - name: Chart Source
-      url: https://github.com/edeedeeed/helm-charts/tree/main/charts/adguard-home
+      url: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/adguard-home

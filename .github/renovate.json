@@ -1,10 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>edeedeeed/renovate-config"
+    "local>3dwardch3ng/renovate-config"
   ],
   "ignorePresets": [
-    "github>edeedeeed/renovate-config:githubActions"
+    "github>3dwardch3ng/renovate-config:githubActions"
   ],
   "gitIgnoredAuthors": [
     "renovate[bot]@users.noreply.github.com",

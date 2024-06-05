@@ -8,10 +8,10 @@
 
 The leading tool for querying and visualizing time series and metrics.
 
-**Homepage:** <https://github.com/edeedeeed/helm-charts/tree/main/charts/grafana>
+**Homepage:** <https://github.com/3dwardch3ng/helm-charts/tree/main/charts/grafana>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=grafana&version=0.1.2)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardch3ng&labels=bug&template=bug_report.yaml&name=grafana&version=0.1.2)**
 
 ## Requirements
 
@@ -28,15 +28,15 @@ To install the chart with the release name `grafana`
 ### OCI (Recommended)
 
 ```console
-helm install grafana oci://ghcr.io/edeedeeed/helm-charts/grafana
+helm install grafana oci://ghcr.io/3dwardch3ng/helm-charts/grafana
 ```
 
 ### Traditional
 
 ```console
-helm repo add edeedeeed https://helm-charts.edward.sydney/
+helm repo add 3dwardch3ng https://helm-charts.edward.sydney/
 helm repo update
-helm install grafana edeedeeed/grafana
+helm install grafana 3dwardch3ng/grafana
 ```
 
 ## Uninstalling the Chart
@@ -59,13 +59,13 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 helm install grafana \
   --set env.TZ="America/New York" \
-    edeedeeed/grafana
+    3dwardch3ng/grafana
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install grafana edeedeeed/grafana -f values.yaml
+helm install grafana 3dwardch3ng/grafana -f values.yaml
 ```
 
 ## Custom configuration

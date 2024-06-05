@@ -8,10 +8,10 @@
 
 A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
 
-**Homepage:** <https://github.com/edeedeeed/helm-charts/tree/main/charts/homer/>
+**Homepage:** <https://github.com/3dwardch3ng/helm-charts/tree/main/charts/homer/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=homer&version=0.1.2)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardch3ng&labels=bug&template=bug_report.yaml&name=homer&version=0.1.2)**
 
 ## Source Code
 
@@ -34,15 +34,15 @@ To install the chart with the release name `homer`
 ### OCI (Recommended)
 
 ```console
-helm install homer oci://ghcr.io/edeedeeed/helm-charts/homer
+helm install homer oci://ghcr.io/3dwardch3ng/helm-charts/homer
 ```
 
 ### Traditional
 
 ```console
-helm repo add edeedeeed https://helm-charts.edward.sydney/
+helm repo add 3dwardch3ng https://helm-charts.edward.sydney/
 helm repo update
-helm install homer edeedeeed/homer
+helm install homer 3dwardch3ng/homer
 ```
 
 ## Uninstalling the Chart
@@ -65,13 +65,13 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 helm install homer \
   --set env.TZ="America/New York" \
-    edeedeeed/homer
+    3dwardch3ng/homer
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install homer edeedeeed/homer -f values.yaml
+helm install homer 3dwardch3ng/homer -f values.yaml
 ```
 
 ## Custom configuration
