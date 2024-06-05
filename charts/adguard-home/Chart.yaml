@@ -37,7 +37,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upload GH cache
+      description: update charts
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/AdguardTeam/AdGuardHome
