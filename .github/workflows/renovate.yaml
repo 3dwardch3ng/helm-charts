@@ -13,8 +13,8 @@ jobs:
     name: Update Chart Metadata
     runs-on: ubuntu-latest
     env:
-      AUTHOR_USER: helm-chart-bot
-      AUTHOR_EMAIL: helm-chart-bot[bot]@users.noreply.github.com
+      AUTHOR_USER: helm-chart-bot[bot]
+      AUTHOR_EMAIL: 171639027+helm-chart-bot[bot]@users.noreply.github.com
     steps:
       - name: Generate Token
         id: app-token
