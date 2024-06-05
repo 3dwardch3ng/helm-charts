@@ -1,7 +1,7 @@
 apiVersion: v2
 name: grafana
 description: The leading tool for querying and visualizing time series and metrics.
-home: https://github.com/3dwardCh3nG/helm-charts/tree/main/charts/grafana
+home: https://github.com/edwardCh3nG/helm-charts/tree/main/charts/grafana
 icon: https://docs.checkmk.com/latest/images/grafana_logo.png
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -2,7 +2,7 @@ name: Feature Request
 description: Suggest an idea for this project
 labels: ["enhancement"]
 body:
-  - type: 3dwardCh3nG
+  - type: edwardCh3nG
     attributes:
       value: |
         Thanks for taking the time to fill out this feature request!
