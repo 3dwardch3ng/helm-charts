@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.0.1
+version: 1.0.2
 # renovate datasource=docker depName=lscr.io/linuxserver/code-server
 
 # This is the version number of the application being deployed. This version number should be
@@ -37,7 +37,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update dependency versions
+      description: update pipeline
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/linuxserver/docker-code-server
