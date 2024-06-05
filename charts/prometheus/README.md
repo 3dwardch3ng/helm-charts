@@ -2,16 +2,16 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg" align="right" width="92" alt="prometheus logo">
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat)
+![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: 25.21.0](https://img.shields.io/badge/AppVersion-25.21.0-informational?style=flat)
 
 Prometheus is a monitoring system and time series database.
 
-**Homepage:** <https://github.com/edwardCh3nG/helm-charts/tree/main/charts/prometheus>
+**Homepage:** <https://github.com/edeedeeed/helm-charts/tree/main/charts/prometheus>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edwardCh3nG&labels=bug&template=bug_report.yaml&name=prometheus&version=0.1.2)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=prometheus&version=0.1.3)**
 
 ## Requirements
 
@@ -28,15 +28,15 @@ To install the chart with the release name `prometheus`
 ### OCI (Recommended)
 
 ```console
-helm install prometheus oci://ghcr.io/edwardCh3nG/helm-charts/prometheus
+helm install prometheus oci://ghcr.io/edeedeeed/helm-charts/prometheus
 ```
 
 ### Traditional
 
 ```console
-helm repo add edwardCh3nG https://helm-charts.edward.sydney/
+helm repo add edeedeeed https://helm-charts.edward.sydney/
 helm repo update
-helm install prometheus edwardCh3nG/prometheus
+helm install prometheus edeedeeed/prometheus
 ```
 
 ## Uninstalling the Chart
@@ -59,13 +59,13 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 helm install prometheus \
   --set env.TZ="America/New York" \
-    edwardCh3nG/prometheus
+    edeedeeed/prometheus
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install prometheus edwardCh3nG/prometheus -f values.yaml
+helm install prometheus edeedeeed/prometheus -f values.yaml
 ```
 
 ## Custom configuration

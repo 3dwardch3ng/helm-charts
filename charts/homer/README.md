@@ -2,16 +2,16 @@
 
 <img src="https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg" align="right" width="92" alt="homer logo">
 
-![Version: 0.1.2](https://img.shields.io/badge/Version-0.1.2-informational?style=flat)
+![Version: 0.1.3](https://img.shields.io/badge/Version-0.1.3-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: v24.05.1](https://img.shields.io/badge/AppVersion-v24.05.1-informational?style=flat)
 
 A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
 
-**Homepage:** <https://github.com/edwardCh3nG/helm-charts/tree/main/charts/homer/>
+**Homepage:** <https://github.com/edeedeeed/helm-charts/tree/main/charts/homer/>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=edwardCh3nG&labels=bug&template=bug_report.yaml&name=homer&version=0.1.2)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=edeedeeed&labels=bug&template=bug_report.yaml&name=homer&version=0.1.3)**
 
 ## Source Code
 
@@ -34,15 +34,15 @@ To install the chart with the release name `homer`
 ### OCI (Recommended)
 
 ```console
-helm install homer oci://ghcr.io/edwardCh3nG/helm-charts/homer
+helm install homer oci://ghcr.io/edeedeeed/helm-charts/homer
 ```
 
 ### Traditional
 
 ```console
-helm repo add edwardCh3nG https://helm-charts.edward.sydney/
+helm repo add edeedeeed https://helm-charts.edward.sydney/
 helm repo update
-helm install homer edwardCh3nG/homer
+helm install homer edeedeeed/homer
 ```
 
 ## Uninstalling the Chart
@@ -65,13 +65,13 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```console
 helm install homer \
   --set env.TZ="America/New York" \
-    edwardCh3nG/homer
+    edeedeeed/homer
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install homer edwardCh3nG/homer -f values.yaml
+helm install homer edeedeeed/homer -f values.yaml
 ```
 
 ## Custom configuration

@@ -1,7 +1,7 @@
 apiVersion: v2
 name: code-server
 description: The VS Code running on a remote server, accessible through the browser.
-home: https://github.com/edwardCh3nG/helm-charts/tree/main/charts/code-server/
+home: https://github.com/edeedeeed/helm-charts/tree/main/charts/code-server/
 icon: https://www.svgrepo.com/download/303535/visual-studio-code-logo.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 1.0.2
+version: 1.0.3
 # renovate datasource=docker depName=lscr.io/linuxserver/code-server
 
 # This is the version number of the application being deployed. This version number should be
@@ -37,9 +37,9 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update pipeline
+      description: Upload GH cache
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/linuxserver/docker-code-server
     - name: Chart Source
-      url: https://github.com/edwardCh3nG/helm-charts/tree/main/charts/code-server
+      url: https://github.com/edeedeeed/helm-charts/tree/main/charts/code-server

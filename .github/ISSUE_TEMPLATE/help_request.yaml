@@ -1,7 +1,7 @@
 name: Help Request
 description: If a chart is failing to deploy or a Pod is failing to run
 labels: ["help request"]
-assignees: edwardCh3nG
+assignees: edeedeeed
 body:
   - type: input
     id: name
