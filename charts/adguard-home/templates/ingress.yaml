@@ -1,90 +1,38 @@
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: v1
+kind: Service
 metadata:
-  name: adguard-home-web-ingress
+  name: adguard-home-ingress
+  namespace: adguard-home
+  labels:
+    app.kubernetes.io/name: adguard-home-ingress
+    app.kubernetes.io/part-of: adguard-home
 spec:
-  rules:
-    - host: adguard-home.edward.sydney
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: main
-                port:
-                  number: 80
-    - host: adguard-home-setup.edward.sydney
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: main
-                port:
-                  number: 3000
----
-apiVersion: k8s.nginx.org/v1
-kind: TransportServer
-metadata:
-  name: dns-tcp
-spec:
-  listener:
-    name: dns-tcp
-    protocol: TCP
-  upstreams:
-    - name: dns-tcp
-      service: dns-tcp
+  type: LoadBalancer
+  ports:
+    - name: http-ingress
+      port: 8080
+      targetPort: 80
+      protocol: TCP
+    - name: http-setup-ingress
+      port: 3000
+      targetPort: 3000
+      protocol: TCP
+    - name: dns-tcp-ingress
       port: 53
-  action:
-    pass: adguard-home
----
-apiVersion: k8s.nginx.org/v1
-kind: TransportServer
-metadata:
-  name: dns-udp
-spec:
-  listener:
-    name: dns-udp
-    protocol: UDP
-  upstreams:
-    - name: dns-udp
-      service: dns-udp
+      targetPort: 53
+      protocol: TCP
+    - name: dns-udp-ingress
       port: 53
-  upstreamParameters:
-    udpRequests: 1
-    udpResponses: 1
-  action:
-    pass: adguard-home
----
-apiVersion: k8s.nginx.org/v1
-kind: TransportServer
-metadata:
-  name: dns-over-tls
-spec:
-  listener:
-    name: tls-passthrough
-    protocol: TLS_PASSTHROUGH
-  upstreams:
-    - name: dns-over-tls
-      service: dns-tcp
+      targetPort: 53
+      protocol: UDP
+    - name: tcp-tls-ingress
       port: 853
-  action:
-    pass: adguard-home
----
-apiVersion: k8s.nginx.org/v1
-kind: TransportServer
-metadata:
-  name: dns-over-quic
-spec:
-  listener:
-    name: tls-passthrough
-    protocol: TLS_PASSTHROUGH
-  upstreams:
-    - name: dns-over-quic
-      service: dns-udp
+      targetPort: 853
+      protocol: TCP
+    - name: udp-quic-ingress
       port: 784
-  action:
-    pass: adguard-home
+      targetPort: 784
+      protocol: UDP
+  selector:
+    app.kubernetes.io/name: adguard-home-ingress
+    app.kubernetes.io/part-of: adguard-home
