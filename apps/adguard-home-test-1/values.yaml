@@ -25,7 +25,7 @@ service:
       app.kubernetes.io/name: adguard-home
     controller: adguard-home
     type: LoadBalancer
-    externalTrafficPolicy: Local
+    internalTrafficPolicy: Local
     loadBalancerIP: 192.168.0.180
     ports:
       web-ui:
