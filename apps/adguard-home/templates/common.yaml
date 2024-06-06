@@ -1,6 +1,6 @@
 {{- include "bjw-s.common.loader.init" . }}
 
-{{- define "adguardHome.harcodedValues" -}}
+{{- define "adguard-home.harcodedValues" -}}
 {{ if not .Values.global.nameOverride }}
 global:
   nameOverride: "{{ .Release.Name }}"
@@ -46,7 +46,7 @@ initContainers:
       runAsUser: 0
 {{- end }}
 {{- end -}}
-{{- $_ := mergeOverwrite .Values (include "adguardHome.hardcodedValues" . | fromYaml) -}}
+{{- $_ := mergeOverwrite .Values (include "adguard-home.hardcodedValues" . | fromYaml) -}}
 
 {{/* Render the templates */}}
 {{ include "bjw-s.common.loader.generate" . }}
