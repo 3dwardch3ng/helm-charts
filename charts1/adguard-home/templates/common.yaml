@@ -1,6 +1,5 @@
-{{- include "bjw-s.common.loader.init" . }}
-
-{{- define "adguard-home.hardcodedValues" -}}
+{{/* Append the hardcoded settings */}}
+{{- define "adguardHome.harcodedValues" -}}
 {{- if .Values.config }}
 configMaps:
   default-config:
@@ -34,14 +33,11 @@ initContainers:
       - name: config
         mountPath: /opt/adguardhome/conf
         accessMode: ReadWriteOnce
-      - name: data
-        mountPath: /opt/adguardhome/work
-        accessMode: ReadWriteOnce
     securityContext:
       runAsUser: 0
 {{- end }}
 {{- end -}}
-{{- $_ := mergeOverwrite .Values (include "adguard-home.hardcodedValues" . | fromYaml) -}}
+{{- $_ := merge .Values (include "adguardHome.harcodedValues" . | fromYaml) -}}
 
 {{/* Render the templates */}}
-{{ include "bjw-s.common.loader.generate" . }}
+{{ include "bjw-s.common.loader.all" . }}

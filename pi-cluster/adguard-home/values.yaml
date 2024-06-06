@@ -8,23 +8,16 @@ image:
 env:
   TZ: "Australia/Sydney"
 
+volumes:
+
+
 persistence:
   config:
     enabled: true
-    retain: true
-    mountPath: /mnt/nfs/AppData/adguardhome/conf
     accessMode: ReadWriteOnce
   work:
     enabled: true
-    retain: true
-    mountPath: /mnt/nfs/AppData/adguardhome/work
     accessMode: ReadWriteOnce
-
-volumeMounts:
-  - name: config
-    mountPath: /opt/adguardhome/conf
-  - name: work
-    mountPath: /opt/adguardhome/work
 
 config: |
   http:
