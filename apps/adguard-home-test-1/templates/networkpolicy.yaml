@@ -58,18 +58,6 @@ spec:
             - port: "53"
             - port: "853"
             - port: "784"
-    - fromEndpoints:
-        - matchLabels:
-            policy.gabe565.com/egress-adguard-dns: "true"
-          matchExpressions:
-            - key: io.kubernetes.pod.namespace
-              operator: Exists
-    - fromEndpoints:
-        - matchLabels:
-            policy.gabe565.com/egress-adguard-api: "true"
-          matchExpressions:
-            - key: io.kubernetes.pod.namespace
-              operator: Exists
   egress:
     - toCIDRSet:
         - cidr: 0.0.0.0/0
