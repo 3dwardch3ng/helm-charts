@@ -1,0 +1,8 @@
+controller:
+  service:
+    ports:
+      ports:
+        # -- Port the external HTTP listener is published with.
+        http: 8080
+        # -- Port the external HTTPS listener is published with.
+        https: 10443
