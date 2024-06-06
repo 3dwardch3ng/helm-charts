@@ -1,0 +1,103 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/bjw-s/helm-charts/blob/a081de5/charts/library/common/values.yaml
+#
+
+controllers:
+  main:
+    enabled: true
+    type: deployment
+    replicas: 1
+    # -- Set the controller upgrade strategy
+    strategy: RollingUpdate
+    containers:
+      main:
+        image:
+          repository: ghcr.io/bastienwirtz/homer
+          tag: v24.05.1
+          pullPolicy: IfNotPresent
+
+# -- environment variables.
+# @default -- See [values.yaml](./values.yaml)
+env:
+# INIT_ASSETS: "0"
+  TZ: UTC
+
+service:
+  # -- Configures service settings for the chart.
+  # @default -- See [values.yaml](./values.yaml)
+  main:
+    enabled: true
+    controller: main
+    type: NodePort
+    ports:
+      web-setup:
+        enabled: true
+        port: 8080
+        nodePort: 30880
+
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See [values.yaml](./values.yaml)
+  main:
+    enabled: false
+    # hosts:
+    #   - host: chart-example.local
+    #     paths:
+    #       - path: /
+    # tls:
+    #   - secretName: chart-example.local-tls
+    #     hosts:
+    #       - chart-example.local
+
+persistence:
+  # -- Configure persistence settings for the chart under this key.
+  # @default -- See [values.yaml](./values.yaml)
+  config:
+    enabled: true
+    type: hostPath
+    hostPath: /mnt/nfs/AppData/homer
+    hostPathType: DirectoryOrCreate
+    globalMounts:
+      - path: /www/assets
+    # storageClass: ""
+    # accessMode: ReadWriteOnce
+    # size: 1Gi
+
+configMaps:
+  config:
+    # -- Store homer configuration as a ConfigMap
+    enabled: false
+    # -- Homer configuration. [[ref]](https://github.com/bastienwirtz/homer/blob/main/docs/configuration.md)
+    # @default -- See [values.yaml](./values.yaml)
+    data:
+      config.yml: |
+        externalConfig: https://raw.githubusercontent.com/bastienwirtz/homer/main/public/assets/config.yml.dist
+
+addons:
+  codeserver:
+    # -- Enable VS Code server addon.
+    #    This allows for easy access to assets.
+    enabled: false
+    # -- Enable and configure ingress settings for the VS Code server under this key.
+    # @default -- See [values.yaml](./values.yaml)
+    ingress:
+      enabled: false
+      # hosts:
+      #   - host: code.example.com
+      #     paths:
+      #       - path: /
+      # tls:
+      #   - secretName: code.example.com-tls
+      #     hosts:
+      #       - code.example.com
+    # @ignored
+    args:
+      - --auth=none
+      - --user-data-dir=/assets/.vscode
+    # @ignored
+    volumeMounts:
+      - name: assets
+        mountPath: /assets
