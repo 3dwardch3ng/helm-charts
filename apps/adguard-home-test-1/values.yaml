@@ -12,14 +12,16 @@ env:
 controllers:
   adguard-home:
     enabled: true
+    type: deployment
     replicas: 1
     containers:
-      image:
-        repository: adguard/adguardhome
-        tag: v0.107.50
-        pullPolicy: IfNotPresent
-      env:
-        TZ: Australia/Sydney
+      adguard-home:
+        image:
+          repository: adguard/adguardhome
+          tag: v0.107.50
+          pullPolicy: IfNotPresent
+        env:
+          TZ: Australia/Sydney
 
 service:
   adguard-home:
