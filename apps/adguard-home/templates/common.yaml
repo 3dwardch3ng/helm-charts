@@ -1,6 +1,6 @@
 {{- include "bjw-s.common.loader.init" . }}
 
-{{- define "adguard-home.harcodedValues" -}}
+{{- define "adguard-home.hardcodedValues" -}}
 {{- if .Values.config }}
 configMaps:
   default-config:
