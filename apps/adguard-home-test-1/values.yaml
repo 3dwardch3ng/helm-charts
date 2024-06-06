@@ -5,10 +5,6 @@
 # https://github.com/bjw-s/helm-charts/blob/a081de5/charts/library/common/values.yaml
 #
 
-env:
-  # -- Set the container timezone
-  TZ: Australia/Sydney
-
 controllers:
   adguard-home:
     enabled: true
@@ -35,21 +31,27 @@ service:
       - protocol: TCP
         port: 8088
         targetPort: 80
+        enabled: true
       - protocol: TCP
         port: 3000
         targetPort: 3000
+        enabled: true
       - protocol: TCP
         port: 53
         targetPort: 53
+        enabled: true
       - protocol: UDP
         port: 53
         targetPort: 53
+        enabled: true
       - protocol: TCP
         port: 853
         targetPort: 853
+        enabled: true
       - protocol: UDP
         port: 784
         targetPort: 784
+        enabled: true
 
 ingress:
   # -- Enable and configure ingress settings for the chart under this key.
