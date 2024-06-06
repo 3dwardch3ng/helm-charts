@@ -8,7 +8,7 @@ prometheus:
       enabled: false
   server:
     nodeSelector:
-      kubernetes.io/hostname: node-0
+      kubernetes.io/hostname: rpi5-cluster-node-0
     securityContext:
       runAsUser: 1000
       runAsNonRoot: true
