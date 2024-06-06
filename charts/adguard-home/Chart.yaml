@@ -15,7 +15,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.3
+version: 0.1.0
 # renovate datasource=docker depName=adguard/adguardhome
 
 # This is the version number of the application being deployed. This version number should be
@@ -37,7 +37,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: update charts
+      description: Update adguard/adguardhome docker tag to v0.107.50
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/AdguardTeam/AdGuardHome

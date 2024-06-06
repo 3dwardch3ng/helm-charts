@@ -6,113 +6,14 @@
 #
 
 env:
-  # -- Set the container timezone
   TZ: Australia/Sydney
 
-controllers:
-  main:
-    enabled: true
-    type: deployment
-    replicas: 1
-    containers:
-      main:
-        image:
-          repository: adguard/adguardhome
-          tag: v0.107.50
-          pullPolicy: IfNotPresent
-
-service:
-  # -- Configures settings for the main service.
-  # @default -- See [values.yaml](./values.yaml)
-  main:
-    enabled: true
-    controller: main
-    type: NodePort
-    ports:
-      web-config:
-        enabled: true
-        port: 3000
-        nodePort: 31000
-      web-panel:
-        enabled: true
-        port: 80
-        nodePort: 30088
-
-  # -- Configures settings for the TCP DNS service.
-  # @default -- See [values.yaml](./values.yaml)
-  dns-tcp:
-    enabled: true
-    controller: main
-    type: LoadBalancer
-    externalTrafficPolicy: Local
-    annotations:
-      metallb.universe.tf/allow-shared-ip: adguard-home
-    ports:
-      dns-tcp:
-        enabled: true
-        port: 53
-      dns-over-tls:
-        enabled: true
-        port: 853
-  # -- Configures settings for the UDP DNS service.
-  # @default -- See [values.yaml](./values.yaml)
-  dns-udp:
-    enabled: true
-    controller: main
-    type: LoadBalancer
-    externalTrafficPolicy: Local
-    annotations:
-      metallb.universe.tf/allow-shared-ip: adguard-home
-    ports:
-      dns-udp:
-        enabled: true
-        protocol: UDP
-        port: 53
-      dns-over-quic:
-        enabled: true
-        protocol: UDP
-        port: 784
-
-ingress:
-  # -- Enable and configure ingress settings for the chart under this key.
-  # @default -- See [values.yaml](./values.yaml)
-  main:
-    enabled: false
-    # hosts:
-    #   - host: chart-example.local
-    #     paths:
-    #       - path: /
-    # tls:
-    #   - secretName: chart-example.local
-    #     hosts:
-    #       - chart-example.local
-
 persistence:
-  # -- Configure config persistence settings for the chart under this key.
-  # @default -- See [values.yaml](./values.yaml)
   config:
-    enabled: true
-    type: hostPath
     hostPath: /mnt/nfs/AppData/adguardhome/config
-    hostPathType: DirectoryOrCreate
-    # storageClass: ""
-    # accessMode: ReadWriteOnce
-    # size: 4Gi
-  # -- Configure data persistence settings for the chart under this key.
-  # @default -- See [values.yaml](./values.yaml)
   data:
-    enabled: true
-    type: hostPath
     hostPath: /mnt/nfs/AppData/adguardhome/work
-    hostPathType: DirectoryOrCreate
-    # storageClass: ""
-    # accessMode: ReadWriteOnce
-    # size: 4Gi
 
-# -- Default AdGuard Home config file.
-#    This will only be copied if an existing config does not exist.
-#    [[ref]](https://github.com/AdguardTeam/AdGuardHome/wiki/Configuration)
-# @default -- See [values.yaml](./values.yaml)
 config: |
   http:
       pprof:
