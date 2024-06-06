@@ -29,10 +29,15 @@ service:
     controller: main
     type: NodePort
     ports:
-      http:
+      web-config:
         enabled: true
         port: 3000
-        nodePort: 33000
+        nodePort: 31000
+      web-panel:
+        enabled: true
+        port: 80
+        nodePort: 8088
+
   # -- Configures settings for the TCP DNS service.
   # @default -- See [values.yaml](./values.yaml)
   dns-tcp:
