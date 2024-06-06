@@ -4,29 +4,40 @@
 # This chart inherits from our common library chart. You can check the default values/options here:
 # https://github.com/bjw-s/helm-charts/blob/a081de5/charts/library/common/values.yaml
 #
-image:
-  # -- Image repository
-  repository: adguard/adguardhome
-  # -- Image pull policy
-  pullPolicy: IfNotPresent
-  # -- Image tag
-  tag: v0.107.50
 
 env:
   # -- Set the container timezone
   TZ: Australia/Sydney
 
+controllers:
+  main:
+    enabled: true
+    type: deployment
+    replicas: 1
+    containers:
+      main:
+        image:
+          repository: adguard/adguardhome
+          tag: v0.107.50
+          pullPolicy: IfNotPresent
+
 service:
   # -- Configures settings for the main service.
   # @default -- See [values.yaml](./values.yaml)
   main:
+    enabled: true
+    controller: main
+    type: ClusterIP
     ports:
       http:
+        enabled: true
         port: 3000
+        nodePort: 33000
   # -- Configures settings for the TCP DNS service.
   # @default -- See [values.yaml](./values.yaml)
   dns-tcp:
     enabled: true
+    controller: main
     type: LoadBalancer
     externalTrafficPolicy: Local
     annotations:
@@ -42,6 +53,7 @@ service:
   # @default -- See [values.yaml](./values.yaml)
   dns-udp:
     enabled: true
+    controller: main
     type: LoadBalancer
     externalTrafficPolicy: Local
     annotations:
