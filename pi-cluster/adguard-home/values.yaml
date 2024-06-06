@@ -12,11 +12,13 @@ persistence:
   config:
     enabled: true
     retain: true
-    mountPath: /mnt/nfs/adguardhome/conf
+    mountPath: /mnt/nfs/AppData/adguardhome/conf
+    accessMode: ReadWriteOnce
   work:
     enabled: true
     retain: true
-    mountPath: /mnt/nfs/adguardhome/work
+    mountPath: /mnt/nfs/AppData/adguardhome/work
+    accessMode: ReadWriteOnce
 
 volumeMounts:
   - name: config
