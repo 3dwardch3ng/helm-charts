@@ -5,32 +5,44 @@
 # https://github.com/bjw-s/helm-charts/blob/a081de5/charts/library/common/values.yaml
 #
 
-environment:
-  name: default
-
-image:
-  # -- Image repository
-  repository: adguard/adguardhome
-  # -- Image pull policy
-  pullPolicy: IfNotPresent
-  # -- Image tag
-  tag: v0.107.50
-
 env:
   # -- Set the container timezone
   TZ: UTC
+
+controllers:
+  main:
+    enabled: true
+    type: deployment
+    replicas: 1
+    containers:
+      main:
+        image:
+          repository: adguard/adguardhome
+          tag: v0.107.50
+          pullPolicy: IfNotPresent
 
 service:
   # -- Configures settings for the main service.
   # @default -- See [values.yaml](./values.yaml)
   main:
+    enabled: true
+    controller: main
+    type: NodePort
     ports:
-      http:
+      web-setup:
+        enabled: true
         port: 3000
+        nodePort: 31000
+      web-panel:
+        enabled: true
+        port: 80
+        nodePort: 30088
+
   # -- Configures settings for the TCP DNS service.
   # @default -- See [values.yaml](./values.yaml)
   dns-tcp:
     enabled: true
+    controller: main
     type: LoadBalancer
     externalTrafficPolicy: Local
     annotations:
@@ -46,6 +58,7 @@ service:
   # @default -- See [values.yaml](./values.yaml)
   dns-udp:
     enabled: true
+    controller: main
     type: LoadBalancer
     externalTrafficPolicy: Local
     annotations:
@@ -78,18 +91,20 @@ persistence:
   # -- Configure config persistence settings for the chart under this key.
   # @default -- See [values.yaml](./values.yaml)
   config:
-    enabled: false
-    retain: true
-    mountPath: /opt/adguardhome/conf
+    enabled: true
+    type: hostPath
+    hostPath: /opt/adguardhome/conf
+    hostPathType: DirectoryOrCreate
     # storageClass: ""
     # accessMode: ReadWriteOnce
     # size: 4Gi
   # -- Configure data persistence settings for the chart under this key.
   # @default -- See [values.yaml](./values.yaml)
   data:
-    enabled: false
-    retain: true
-    mountPath: /opt/adguardhome/work
+    enabled: true
+    type: hostPath
+    hostPath: /opt/adguardhome/conf
+    hostPathType: DirectoryOrCreate
     # storageClass: ""
     # accessMode: ReadWriteOnce
     # size: 4Gi

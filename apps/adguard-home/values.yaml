@@ -1,0 +1,339 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/bjw-s/helm-charts/blob/a081de5/charts/library/common/values.yaml
+#
+
+env:
+  TZ: Australia/Sydney
+
+persistence:
+  config:
+    hostPath: /mnt/nfs/AppData/adguardhome/config
+  data:
+    hostPath: /mnt/nfs/AppData/adguardhome/work
+
+config: |
+  http:
+      pprof:
+        port: 6060
+        enabled: false
+      address: 0.0.0.0:8089
+      session_ttl: 720h
+    users:
+      - name: edward
+        password: $2a$10$BtV1bERq3UX84k3TYmPSU.faSscEm2Yi3HjVQZVcqWVhdPHlLu..q
+    auth_attempts: 5
+    block_auth_min: 15
+    http_proxy: ""
+    language: en
+    theme: auto
+    dns:
+      bind_hosts:
+        - 0.0.0.0
+      port: 53
+      anonymize_client_ip: false
+      ratelimit: 0
+      ratelimit_subnet_len_ipv4: 24
+      ratelimit_subnet_len_ipv6: 56
+      ratelimit_whitelist: []
+      refuse_any: true
+      upstream_dns:
+        - 46.243.228.116
+        - 46.243.228.117
+        - 2a10:50c0:c000::35e6:8f78
+        - 2a10:50c0:c000::1:35e6:8f78
+        - https://d.adguard-dns.com/dns-query/35e68f78
+        - tls://35e68f78.d.adguard-dns.com
+        - quic://35e68f78.d.adguard-dns.com
+      upstream_dns_file: ""
+      bootstrap_dns:
+        - 9.9.9.10
+        - 149.112.112.10
+        - 2620:fe::10
+        - 2620:fe::fe:10
+      fallback_dns: []
+      upstream_mode: parallel
+      fastest_timeout: 1s
+      allowed_clients: []
+      disallowed_clients:
+        - 8.209.68.21
+        - 8.217.149.64
+        - 8.217.254.174
+        - 8.222.253.90
+        - 34.22.226.153
+        - 34.47.1.175
+        - 39.106.44.126
+        - 43.133.10.29
+        - 47.74.90.127
+        - 47.90.250.21
+        - 47.90.254.226
+        - 52.73.169.169
+        - 52.81.196.250
+        - 54.222.238.164
+        - 54.223.43.44
+        - 64.62.197.0/24
+        - 64.226.98.208
+        - 65.49.1.0/24
+        - 65.108.235.151
+        - 66.23.234.138
+        - 69.164.217.201
+        - 71.6.199.23
+        - 71.6.232.0/24
+        - 74.82.47.0/24
+        - 89.248.167.147
+        - 101.68.211.2
+        - 101.132.145.132
+        - 104.248.43.137
+        - 106.75.64.13
+        - 106.75.90.211
+        - 107.189.29.130
+        - 112.74.38.239
+        - 118.194.238.196
+        - 118.194.251.75
+        - 128.14.153.0/24
+        - 128.14.159.0/24
+        - 128.14.209.0/24
+        - 128.199.52.28
+        - 129.88.68.190
+        - 131.159.25.7
+        - 139.144.55.216
+        - 139.162.102.75
+        - 141.22.28.227
+        - 141.212.120.0/24
+        - 141.212.121.0/24
+        - 141.212.122.0/24
+        - 141.212.124.0/24
+        - 141.212.125.0/24
+        - 141.212.123.0/24
+        - 146.88.241.0/24
+        - 157.245.92.0/24
+        - 159.203.31.169
+        - 162.142.125.0/24
+        - 164.92.184.106
+        - 165.22.203.51
+        - 167.94.138.0/24
+        - 167.94.145.0/24
+        - 167.94.146.0/24
+        - 167.248.133.0/24
+        - 167.172.216.160
+        - 174.138.40.30
+        - 183.136.225.0/24
+        - 183.230.113.53
+        - 185.180.143.15
+        - 185.233.19.0/24
+        - 192.87.173.56
+        - 193.181.177.126
+        - 194.169.175.228
+        - 195.221.58.0/24
+        - 195.221.58.3
+        - 198.98.54.58
+        - 199.45.154.0/24
+        - 199.45.155.0/24
+        - 202.112.47.208
+        - 205.185.119.81
+        - 210.13.77.83
+        - 216.218.206.0/24
+        - 220.197.51.168
+        - 223.113.128.133
+        - 223.113.128.138
+        - 2602:80d:1000:b0cc:e::/80
+        - 2620:96:e000:b0cc:e::/80
+        - 2602:80d:1003::/112
+        - 2602:80d:1004::/112
+        - fdcf:1a3b:5df6:5d1c:dbd5:b4cc:155:7b20
+      blocked_hosts:
+        - version.bind
+        - id.server
+        - hostname.bind
+      trusted_proxies:
+        - 127.0.0.0/8
+        - ::1/128
+      cache_size: 4294967295
+      cache_ttl_min: 0
+      cache_ttl_max: 0
+      cache_optimistic: false
+      bogus_nxdomain: []
+      aaaa_disabled: false
+      enable_dnssec: true
+      edns_client_subnet:
+        custom_ip: ""
+        enabled: true
+        use_custom: false
+      max_goroutines: 300
+      handle_ddr: true
+      ipset: []
+      ipset_file: ""
+      bootstrap_prefer_ipv6: false
+      upstream_timeout: 10s
+      private_networks: []
+      use_private_ptr_resolvers: true
+      local_ptr_upstreams: []
+      use_dns64: false
+      dns64_prefixes: []
+      serve_http3: false
+      use_http3_upstreams: false
+      serve_plain_dns: true
+      hostsfile_enabled: true
+    tls:
+      enabled: true
+      server_name: edward.sydney
+      force_https: false
+      port_https: 443
+      port_dns_over_tls: 853
+      port_dns_over_quic: 853
+      port_dnscrypt: 0
+      dnscrypt_config_file: ""
+      allow_unencrypted_doh: false
+      certificate_chain: ""
+      private_key: ""
+      certificate_path: /mnt/nfs/etc/letsencrypt/live/edward.sydney-0001/fullchain.pem
+      private_key_path: /mnt/nfs/etc/letsencrypt/live/edward.sydney-0001/privkey.pem
+      strict_sni_check: false
+    querylog:
+      dir_path: ""
+      ignored: []
+      interval: 2160h
+      size_memory: 1000
+      enabled: true
+      file_enabled: true
+    statistics:
+      dir_path: ""
+      ignored: []
+      interval: 720h
+      enabled: true
+    filters:
+      - enabled: true
+        url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+        name: AdGuard DNS filter
+        id: 1
+      - enabled: false
+        url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
+        name: AdAway Default Blocklist
+        id: 2
+    whitelist_filters: []
+    user_rules:
+      - 192.168.0.101 nc.edward.sydney
+      - '@@||ichnaea.netflix.com^$important'
+      - '@@||customerevents.netflix.com^$important'
+      - '@@||metrics.icloud.com^$important'
+      - '@@||logs.netflix.com^$important'
+      - '@@||tr.www.cloudflare.com^$important'
+      - '@@||msmetrics.ws.sonos.com^$important'
+      - '@@||ca.iadsdk.apple.com^$important'
+      - '@@||static.cloudflareinsights.com^$important'
+      - '@@||beacons.gvt2.com^$important'
+      - '@@||beacons.gcp.gvt2.com^$important'
+      - '@@||log-ingestion-ap2.samsungacr.com^$important'
+      - '@@||notes-analytics-events.apple.com^$important'
+      - '@@||segment-cdn.producthunt.com^$important'
+      - '@@||config.samsungads.com^$important'
+      - '@@||p11.techlab-cdn.com^$important'
+      - '@@||telstracorporationlt.tt.omtrdc.net^$important'
+      - '@@||gnar.grammarly.com^$important'
+      - '@@||collector.github.com^$important'
+      - '@@||ad.doubleclick.net^$important'
+      - '@@||log-ingestion-v2-ap2.samsungacr.com^$important'
+      - '@@||f-log-mac-extension.grammarly.io^$important'
+      - '@@||treatment.grammarly.com^$important'
+      - '@@||config.jpush.cn^$important'
+      - '@@||browser-intake-datadoghq.com^$important'
+      - '@@||log-config.samsungacr.com^$important'
+      - ""
+    dhcp:
+      enabled: false
+      interface_name: ""
+      local_domain_name: lan
+      dhcpv4:
+        gateway_ip: ""
+        subnet_mask: ""
+        range_start: ""
+        range_end: ""
+        lease_duration: 86400
+        icmp_timeout_msec: 1000
+        options: []
+      dhcpv6:
+        range_start: ""
+        lease_duration: 86400
+        ra_slaac_only: false
+        ra_allow_slaac: false
+    filtering:
+      blocking_ipv4: ""
+      blocking_ipv6: ""
+      blocked_services:
+        schedule:
+          time_zone: Local
+        ids: []
+      protection_disabled_until: null
+      safe_search:
+        enabled: false
+        bing: true
+        duckduckgo: true
+        google: true
+        pixabay: true
+        yandex: true
+        youtube: true
+      blocking_mode: default
+      parental_block_host: family-block.dns.adguard.com
+      safebrowsing_block_host: standard-block.dns.adguard.com
+      rewrites: []
+      safebrowsing_cache_size: 1048576
+      safesearch_cache_size: 1048576
+      parental_cache_size: 1048576
+      cache_time: 30
+      filters_update_interval: 24
+      blocked_response_ttl: 60
+      filtering_enabled: true
+      parental_enabled: false
+      safebrowsing_enabled: false
+      protection_enabled: true
+    clients:
+      runtime_sources:
+        whois: true
+        arp: true
+        rdns: true
+        dhcp: true
+        hosts: true
+      persistent:
+        - safe_search:
+            enabled: false
+            bing: true
+            duckduckgo: true
+            google: true
+            pixabay: true
+            yandex: true
+            youtube: true
+          blocked_services:
+            schedule:
+              time_zone: Local
+            ids: []
+          name: iPhone 15 Pro Max
+          ids:
+            - c4:c1:7d:a5:22:58
+          tags:
+            - device_phone
+          upstreams: []
+          uid: 018d867f-1b71-7e03-8afa-26f9428d07d0
+          upstreams_cache_size: 0
+          upstreams_cache_enabled: false
+          use_global_settings: true
+          filtering_enabled: false
+          parental_enabled: false
+          safebrowsing_enabled: false
+          use_global_blocked_services: true
+          ignore_querylog: false
+          ignore_statistics: false
+    log:
+      file: ""
+      max_backups: 0
+      max_size: 100
+      max_age: 3
+      compress: false
+      local_time: false
+      verbose: false
+    os:
+      group: ""
+      user: ""
+      rlimit_nofile: 0
+    schema_version: 28
