@@ -37,7 +37,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update adguard/adguardhome docker tag to v0.107.50
+      description: update charts
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/AdguardTeam/AdGuardHome
