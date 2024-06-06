@@ -1,5 +1,11 @@
-{{/* Append the hardcoded settings */}}
+{{- include "bjw-s.common.loader.init" . }}
+
 {{- define "adguardHome.harcodedValues" -}}
+{{ if not .Values.global.nameOverride }}
+global:
+  nameOverride: "{{ .Release.Name }}"
+{{ end }}
+
 {{- if .Values.config }}
 configMaps:
   default-config:
@@ -40,7 +46,7 @@ initContainers:
       runAsUser: 0
 {{- end }}
 {{- end -}}
-{{- $_ := merge .Values (include "adguardHome.harcodedValues" . | fromYaml) -}}
+{{- $_ := mergeOverwrite .Values (include "adguardHome.hardcodedValues" . | fromYaml) -}}
 
 {{/* Render the templates */}}
-{{ include "bjw-s.common.loader.all" . }}
+{{ include "bjw-s.common.loader.generate" . }}
