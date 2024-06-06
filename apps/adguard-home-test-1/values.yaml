@@ -28,27 +28,33 @@ service:
     externalTrafficPolicy: Local
     loadBalancerIP: 192.168.0.180
     ports:
-      - protocol: TCP
+      web-ui:
+        protocol: TCP
         port: 8088
         targetPort: 80
         enabled: true
-      - protocol: TCP
+      web-setup:
+        protocol: TCP
         port: 3000
         targetPort: 3000
         enabled: true
-      - protocol: TCP
+      dns-tcp:
+        protocol: TCP
         port: 53
         targetPort: 53
         enabled: true
-      - protocol: UDP
+      dns-udp:
+        protocol: UDP
         port: 53
         targetPort: 53
         enabled: true
-      - protocol: TCP
+      dns-tls:
+        protocol: TCP
         port: 853
         targetPort: 853
         enabled: true
-      - protocol: UDP
+      dns-guic:
+        protocol: UDP
         port: 784
         targetPort: 784
         enabled: true
