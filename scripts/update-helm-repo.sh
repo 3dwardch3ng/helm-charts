@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+## Cilium Helm Chart Repo
+helm repo add cilium https://helm.cilium.io/
+
 ## bjw-s common chart library Helm Chart Repo
 helm repo add bjw-s https://bjw-s.github.io/helm-charts
 

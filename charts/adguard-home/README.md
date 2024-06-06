@@ -91,7 +91,7 @@ N/A
 | controllers.main.enabled | bool | `true` |  |
 | controllers.main.replicas | int | `1` |  |
 | controllers.main.type | string | `"deployment"` |  |
-| env.TZ | string | `"UTC"` | Set the container timezone |
+| env.TZ | string | `"Australia/Sydney"` | Set the container timezone |
 | ingress.main | object | See [values.yaml](./values.yaml) | Enable and configure ingress settings for the chart under this key. |
 | persistence.config | object | See [values.yaml](./values.yaml) | Configure config persistence settings for the chart under this key. |
 | persistence.data | object | See [values.yaml](./values.yaml) | Configure data persistence settings for the chart under this key. |

@@ -7,7 +7,7 @@
 
 env:
   # -- Set the container timezone
-  TZ: UTC
+  TZ: Australia/Sydney
 
 controllers:
   main:
@@ -90,7 +90,7 @@ persistence:
   config:
     enabled: true
     type: hostPath
-    hostPath: /opt/adguardhome/conf
+    hostPath: /mnt/nfs/AppData/adguardhome/conf
     hostPathType: DirectoryOrCreate
     # storageClass: ""
     # accessMode: ReadWriteOnce
@@ -100,7 +100,7 @@ persistence:
   data:
     enabled: true
     type: hostPath
-    hostPath: /opt/adguardhome/conf
+    hostPath: /mnt/nfs/AppData/adguardhome/work
     hostPathType: DirectoryOrCreate
     # storageClass: ""
     # accessMode: ReadWriteOnce
