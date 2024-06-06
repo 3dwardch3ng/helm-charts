@@ -1,17 +1,4 @@
-{{/* Make sure all variables are set properly */}}
-{{- include "common.values.setup" . }}
-
-{{/* Append the configMap volume to the volumes */}}
-{{- define "adguard-home.configVolume" -}}
-enabled: "true"
-mountPath: "/tmp/AdGuardHome.yaml"
-subPath: "AdGuardHome.yaml"
-type: "custom"
-volumeSpec:
-  configMap:
-    name: {{ include "common.names.fullname" . }}-config
-{{- end -}}
-{{- $_ := set .Values.persistence "adguard-home-config" (include "adguard-home.config{{/* Append the hardcoded settings */}}
+{{/* Append the hardcoded settings */}}
 {{- define "adguardHome.harcodedValues" -}}
 {{- if .Values.config }}
 configMaps:
@@ -57,7 +44,3 @@ initContainers:
 
 {{/* Render the templates */}}
 {{ include "bjw-s.common.loader.all" . }}
-  Volume" . | fromYaml) -}}
-
-{{/* Render the templates */}}
-{{ include "common.all" . }}
