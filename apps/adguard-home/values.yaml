@@ -27,7 +27,7 @@ service:
   main:
     enabled: true
     controller: main
-    type: ClusterIP
+    type: NodePort
     ports:
       http:
         enabled: true
@@ -88,7 +88,7 @@ persistence:
   config:
     enabled: true
     type: hostPath
-    hostPath: /mnt/nfs/adguardhome/config
+    hostPath: /mnt/nfs/AppData/adguardhome/config
     hostPathType: DirectoryOrCreate
     # storageClass: ""
     # accessMode: ReadWriteOnce
@@ -98,7 +98,7 @@ persistence:
   data:
     enabled: true
     type: hostPath
-    hostPath: /mnt/nfs/adguardhome/work
+    hostPath: /mnt/nfs/AppData/adguardhome/work
     hostPathType: DirectoryOrCreate
     # storageClass: ""
     # accessMode: ReadWriteOnce
