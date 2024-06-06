@@ -36,7 +36,7 @@ service:
       web-panel:
         enabled: true
         port: 80
-        nodePort: 30080
+        nodePort: 30088
 
   # -- Configures settings for the TCP DNS service.
   # @default -- See [values.yaml](./values.yaml)
