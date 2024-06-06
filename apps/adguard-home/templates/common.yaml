@@ -1,0 +1,63 @@
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the configMap volume to the volumes */}}
+{{- define "adguard-home.configVolume" -}}
+enabled: "true"
+mountPath: "/tmp/AdGuardHome.yaml"
+subPath: "AdGuardHome.yaml"
+type: "custom"
+volumeSpec:
+  configMap:
+    name: {{ include "common.names.fullname" . }}-config
+{{- end -}}
+{{- $_ := set .Values.persistence "adguard-home-config" (include "adguard-home.config{{/* Append the hardcoded settings */}}
+{{- define "adguardHome.harcodedValues" -}}
+{{- if .Values.config }}
+configMaps:
+  default-config:
+    enabled: true
+    data:
+      AdGuardHome.yaml: {{ toYaml .Values.config | nindent 8 }}
+
+persistence:
+  default-config:
+    enabled: true
+    type: configMap
+    name: {{ include "bjw-s.common.lib.chart.names.fullname" . }}-default-config
+    mountPath: "-"
+
+initContainers:
+  copy-default-config:
+    image: alpine
+    imagePullPolicy: IfNotPresent
+    command:
+      - sh
+      - -c
+      - |
+        if [[ ! -f /opt/adguardhome/conf/AdGuardHome.yaml ]]; then
+          mkdir -p /opt/adguardhome/conf
+          cp /tmp/AdGuardHome.yaml /opt/adguardhome/conf/AdGuardHome.yaml
+        fi
+    volumeMounts:
+      - name: default-config
+        mountPath: /tmp/AdGuardHome.yaml
+        subPath: AdGuardHome.yaml
+      - name: config
+        mountPath: /opt/adguardhome/conf
+        accessMode: ReadWriteOnce
+      - name: data
+        mountPath: /opt/adguardhome/work
+        accessMode: ReadWriteOnce
+    securityContext:
+      runAsUser: 0
+{{- end }}
+{{- end -}}
+{{- $_ := merge .Values (include "adguardHome.harcodedValues" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "bjw-s.common.loader.all" . }}
+  Volume" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "common.all" . }}
