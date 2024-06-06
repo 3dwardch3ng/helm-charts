@@ -1,11 +1,6 @@
 {{- include "bjw-s.common.loader.init" . }}
 
 {{- define "adguard-home.harcodedValues" -}}
-{{ if not .Values.global.nameOverride }}
-global:
-  nameOverride: "{{ .Release.Name }}"
-{{ end }}
-
 {{- if .Values.config }}
 configMaps:
   default-config:
