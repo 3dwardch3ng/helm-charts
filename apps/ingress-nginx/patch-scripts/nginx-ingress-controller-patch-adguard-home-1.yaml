@@ -5,7 +5,7 @@ spec:
         - name: controller
           ports:
             - containerPort: 10080
-              name: http
+              name: http-web
               protocol: TCP
             - containerPort: 13000
               name: http-setup
