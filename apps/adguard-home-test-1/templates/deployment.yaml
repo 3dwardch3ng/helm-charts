@@ -4,15 +4,15 @@ metadata:
   name: adguard-home
   namespace: adguard-home
   labels:
-    name: adguard-home
+    app.kubernetes.io/component: adguard-home
 spec:
   selector:
     matchLabels:
-      name: adguard-home
+      app.kubernetes.io/component: adguard-home
   template:
     metadata:
       labels:
-        name: adguard-home
+        app.kubernetes.io/component: adguard-home
     spec:
       containers:
         - name: adguard-home
