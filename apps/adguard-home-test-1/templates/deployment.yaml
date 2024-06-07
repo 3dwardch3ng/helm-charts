@@ -42,8 +42,10 @@ spec:
               mountPath: /opt/adguardhome/config
       volumes:
         - name: adguard-home-data
-          persistentVolumeClaim:
-            claimName: adguard-home-data-pvc
+          hostPath:
+            path: /mnt/nfs/AppData/adguardhome/work
+            type: Directory
         - name: adguard-home-config
-          persistentVolumeClaim:
-            claimName: adguard-home-config-pvc
+          hostPath:
+            path: /mnt/nfs/AppData/adguardhome/config
+            type: Directory
