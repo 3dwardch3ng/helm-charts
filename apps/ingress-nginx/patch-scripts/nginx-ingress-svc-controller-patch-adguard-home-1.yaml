@@ -13,12 +13,6 @@ spec:
       protocol: TCP
       targetPort: 13000
     - appProtocol: domain
-      name: dns-tcp
-      nodePort: 32743
-      port: 53
-      protocol: TCP
-      targetPort: 53
-    - appProtocol: domain
       name: dns-udp
       nodePort: 32744
       port: 53
