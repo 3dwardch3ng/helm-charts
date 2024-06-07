@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: adguard-home
   namespace: adguard-home
+  labels:
+    app.kubernetes.io/name: adguard-home
 spec:
   selector:
     app.kubernetes.io/name: adguard-home
