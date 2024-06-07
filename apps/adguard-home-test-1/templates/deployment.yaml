@@ -16,6 +16,25 @@ spec:
       containers:
         - name: adguard-home
           image: adguard/adguardhome:v0.107.50
+          ports:
+            - protocol: TCP
+              containerPort: 3000
+              name: http-setup
+            - protocol: TCP
+              containerPort: 80
+              name: http
+            - protocol: UDP
+              containerPort: 53
+              name: dns-udp
+            - protocol: TCP
+              containerPort: 53
+              name: dns-tcp
+            - protocol: TCP
+              containerPort: 853
+              name: dns-tls
+            - protocol: UDP
+              containerPort: 784
+              name: dns-quic
           volumeMounts:
             - name: adguard-home-data
               mountPath: /opt/adguardhome/work
