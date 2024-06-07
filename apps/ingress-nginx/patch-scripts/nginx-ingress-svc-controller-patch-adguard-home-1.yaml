@@ -18,15 +18,3 @@ spec:
       port: 53
       protocol: UDP
       targetPort: 53
-    - appProtocol: domain-s
-      name: dns-tls
-      nodePort: 32745
-      port: 853
-      protocol: TCP
-      targetPort: 853
-    - appProtocol: dns-over-quic
-      name: dns-guic
-      nodePort: 32746
-      port: 784
-      protocol: UDP
-      targetPort: 784

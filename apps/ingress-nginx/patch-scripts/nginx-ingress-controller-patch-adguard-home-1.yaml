@@ -8,7 +8,3 @@ spec:
               hostPort: 10080
             - containerPort: 13000
               hostPort: 13000
-            - containerPort: 853
-              hostPort: 853
-            - containerPort: 784
-              hostPort: 784
