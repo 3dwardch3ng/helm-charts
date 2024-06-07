@@ -17,5 +17,12 @@ controller:
       http: http
       # -- Port of the ingress controller the external HTTPS listener is mapped to.
       https: https
-      http-web: 10080
+      10080-tcp: 10080
       http-setup: 13000
+tcp:
+  "10080": "adguard-home/adguard-home:10080"
+  "":
+udp:
+  "53": "adguard-home/adguard-home:53"
+  "853": "adguard-home/adguard-home:853"
+  "":
