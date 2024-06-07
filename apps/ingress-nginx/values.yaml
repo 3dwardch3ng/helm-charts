@@ -19,11 +19,3 @@ controller:
       https: https
       http-web: 10080
       http-setup: 13000
-  nodeSelector:
-    kubernetes.io/hostname: rpi5-cluster-node-0
-  admissionWebhooks:
-    patch:
-      kubernetes.io/hostname: rpi5-cluster-node-0
-defaultBackend:
-  nodeSelector:
-    kubernetes.io/hostname: rpi5-cluster-node-0
