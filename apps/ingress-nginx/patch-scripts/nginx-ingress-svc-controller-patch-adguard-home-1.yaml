@@ -1,32 +1,38 @@
 spec:
   ports:
-    - nodePort: 10080
+    - appProtocol: http
+      name: http-web
+      nodePort: 32740
       port: 10080
       protocol: TCP
-      name: http
       targetPort: 10080
-    - nodePort: 13000
-      port: 13000
+    - appProtocol: http
       name: http-setup
+      nodePort: 32741
+      port: 13000
       protocol: TCP
-      targetPort: 10080
-    - nodePort: 53
-      port: 53
+      targetPort: 13000
+    - appProtocol: domain
       name: dns-tcp
-      protocol: TCP
-      targetPort: 10080
-    - nodePort: 53
+      nodePort: 32742
       port: 53
+      protocol: TCP
+      targetPort: 53
+    - appProtocol: domain
       name: dns-udp
+      nodePort: 32743
+      port: 53
       protocol: UDP
-      targetPort: 10080
-    - nodePort: 853
-      port: 853
+      targetPort: 53
+    - appProtocol: domain-s
       name: dns-tls
+      nodePort: 32744
+      port: 853
       protocol: TCP
-      targetPort: 10080
-    - nodePort: 784
+      targetPort: 853
+    - appProtocol: dns-over-quic
+      name: dns-guic
+      nodePort: 32745
       port: 784
-      name: dns-quic
-      protocol: TCP
-      targetPort: 10080
+      protocol: UDP
+      targetPort: 784
