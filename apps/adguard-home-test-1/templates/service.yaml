@@ -32,5 +32,6 @@ spec:
       targetPort: 784
       name: dns-quic
   type: LoadBalancer
+  clusterIP: 10.43.79.234
   externalTrafficPolicy: Local
   internalTrafficPolicy: Local
