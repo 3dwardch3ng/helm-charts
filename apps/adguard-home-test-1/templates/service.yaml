@@ -5,7 +5,7 @@ metadata:
   namespace: adguard-home
 spec:
   selector:
-    name: adguard-home
+    app.kubernetes.io/name: adguard-home
   type: ClusterIP
   internalTrafficPolicy: Cluster
   ports:
