@@ -9,11 +9,11 @@ spec:
   type: ClusterIP
   ports:
     - protocol: TCP
-      port: 3000
+      port: 13000
       targetPort: 3000
       name: http-setup
     - protocol: TCP
-      port: 80
+      port: 10080
       targetPort: 80
       name: http
     - protocol: UDP
