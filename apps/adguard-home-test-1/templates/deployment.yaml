@@ -1,7 +1,7 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: Deployment
 metadata:
-  name: adguard-home-deployment
+  name: adguard-home
   namespace: adguard-home
 spec:
   replicas: 1
