@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: adguard-home
+      app.kubernetes.io/name: adguard-home
   template:
     metadata:
       labels:
