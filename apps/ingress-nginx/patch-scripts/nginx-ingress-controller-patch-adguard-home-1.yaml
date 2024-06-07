@@ -1,0 +1,24 @@
+spec:
+  template:
+    spec:
+      containers:
+        - name: controller
+          ports:
+            - containerPort: 10080
+              name: http
+              protocol: TCP
+            - containerPort: 13000
+              name: http-setup
+              protocol: TCP
+            - containerPort: 53
+              name: dns-tcp
+              protocol: TCP
+            - containerPort: 53
+              name: dns-udp
+              protocol: UDP
+            - containerPort: 853
+              name: dns-tls
+              protocol: TCP
+            - containerPort: 784
+              name: dns-quic
+              protocol: UDP

@@ -1,0 +1,32 @@
+spec:
+  ports:
+    - nodePort: 10080
+      port: 10080
+      protocol: TCP
+      name: http
+      targetPort: 10080
+    - nodePort: 13000
+      port: 13000
+      name: http-setup
+      protocol: TCP
+      targetPort: 10080
+    - nodePort: 53
+      port: 53
+      name: dns-tcp
+      protocol: TCP
+      targetPort: 10080
+    - nodePort: 53
+      port: 53
+      name: dns-udp
+      protocol: UDP
+      targetPort: 10080
+    - nodePort: 853
+      port: 853
+      name: dns-tls
+      protocol: TCP
+      targetPort: 10080
+    - nodePort: 784
+      port: 784
+      name: dns-quic
+      protocol: TCP
+      targetPort: 10080
