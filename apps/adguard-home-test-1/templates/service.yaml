@@ -4,8 +4,9 @@ metadata:
   name: adguard-home
   namespace: adguard-home
 spec:
-  type: LoadBalancer
-  externalTrafficPolicy: Cluster
+  selector:
+    app.kubernetes.io/name: adguard-home
+  type: ClusterIP
   internalTrafficPolicy: Cluster
   ports:
     - protocol: TCP
