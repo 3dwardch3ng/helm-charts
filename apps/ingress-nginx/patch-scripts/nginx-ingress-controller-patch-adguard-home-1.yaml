@@ -4,21 +4,26 @@ spec:
       containers:
         - name: controller
           ports:
-            - containerPort: 10080
+            - nodePort: 31100
+              port: 10080
               name: http-web
-              protocol: TCP
-            - containerPort: 13000
+            - nodePort: 31101
+              port: 13000
               name: http-setup
               protocol: TCP
-            - containerPort: 53
+            - nodePort: 31102
+              port: 53
               name: dns-tcp
               protocol: TCP
-            - containerPort: 53
+            - nodePort: 31103
+              port: 53
               name: dns-udp
               protocol: UDP
-            - containerPort: 853
+            - nodePort: 31104
+              port: 853
               name: dns-tls
               protocol: TCP
-            - containerPort: 784
+            - nodePort: 31105
+              port: 784
               name: dns-quic
               protocol: UDP
