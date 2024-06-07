@@ -6,6 +6,7 @@ metadata:
 spec:
   selector:
     app.kubernetes.io/name: adguard-home
+  type: ClusterIP
   ports:
     - protocol: TCP
       port: 3000
