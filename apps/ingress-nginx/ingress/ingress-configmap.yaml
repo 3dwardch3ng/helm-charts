@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tcp-services
+  namespace: kube-system
+data:
+  10080: "adguard-home/adguard-home:10080"
+  13000: "adguard-home/adguard-home:13000"
+  53: "adguard-home/adguard-home:53"
+  853: "adguard-home/adguard-home:853"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: udp-services
+  namespace: ingress-nginx
+data:
+  53: "adguard-home/adguard-home:53"
+  784: "adguard-home/adguard-home:784"
