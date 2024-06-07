@@ -2,27 +2,14 @@ controller:
   containerPort:
     http: 80
     https: 443
-    http-web: 10080
-    http-setup: 13000
   service:
     ports:
       # -- Port the external HTTP listener is published with.
       http: 8080
       # -- Port the external HTTPS listener is published with.
       https: 10443
-      http-web: 10080
-      http-setup: 13000
     targetPorts:
       # -- Port of the ingress controller the external HTTP listener is mapped to.
       http: http
       # -- Port of the ingress controller the external HTTPS listener is mapped to.
       https: https
-      10080-tcp: 10080
-      http-setup: 13000
-tcp:
-  "10080": "adguard-home/adguard-home:10080"
-  "":
-udp:
-  "53": "adguard-home/adguard-home:53"
-  "853": "adguard-home/adguard-home:853"
-  "":
