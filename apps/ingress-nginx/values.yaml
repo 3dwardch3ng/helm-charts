@@ -10,7 +10,7 @@ controller:
       https: 10443
 tcp:
   "13000": "adguard-home/adguard-home-web-setup:13000"
-  "10080": "adguard-home/adguard-home-web-console:10080"
+  "10080": "adguard-home/adguard-home-web:10080"
   "53": "adguard-home/adguard-home-dns-tcp:53"
   "853": "adguard-home/adguard-home-dns-tls:853"
 
