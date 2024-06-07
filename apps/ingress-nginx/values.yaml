@@ -1,10 +1,29 @@
 controller:
-  replicas: 1
+  containerPort:
+    http: 80
+    https: 443
+    http-web: 10080
+    http-setup: 13000
   service:
     ports:
       # -- Port the external HTTP listener is published with.
       http: 8080
       # -- Port the external HTTPS listener is published with.
       https: 10443
+      http-web: 10080
+      http-setup: 13000
+    targetPorts:
+      # -- Port of the ingress controller the external HTTP listener is mapped to.
+      http: http
+      # -- Port of the ingress controller the external HTTPS listener is mapped to.
+      https: https
+      http-web: 10080
+      http-setup: 13000
+  nodeSelector:
+    kubernetes.io/hostname: rpi5-cluster-node-0
+  admissionWebhooks:
+    patch:
+      kubernetes.io/hostname: rpi5-cluster-node-0
+defaultBackend:
   nodeSelector:
     kubernetes.io/hostname: rpi5-cluster-node-0
