@@ -20,40 +20,40 @@ spec:
           ports:
             - protocol: TCP
               containerPort: 53
-              name: dns-tcp
+              name: con-dns-tcp
             - protocol: UDP
               containerPort: 53
-              name: dns-udp
+              name: con-dns-udp
             - protocol: UDP
               containerPort: 67
-              name: dhcp-server-udp
+              name: con-dhcp-server-udp
             - protocol: UDP
               containerPort: 68
-              name: dhcp-client-udp
+              name: con-dhcp-client-udp
             - protocol: TCP
               containerPort: 80
-              name: main-tcp
+              name: con-main-tcp
             - protocol: TCP
               containerPort: 443
-              name: https-tcp
+              name: con-https-tcp
             - protocol: UDP
               containerPort: 443
-              name: https-udp
+              name: con-https-udp
             - protocol: TCP
               containerPort: 853
-              name: dns-tls-tcp
+              name: con-dns-tls-tcp
             - protocol: UDP
               containerPort: 853
-              name: dns-tls-udp
+              name: con-dns-tls-udp
             - protocol: TCP
               containerPort: 3000
-              name: https-alt-tcp
+              name: con-http-alt-tcp
             - protocol: UDP
               containerPort: 3000
-              name: https-alt-udp
+              name: con-http-alt-udp
             - protocol: TCP
               containerPort: 5443
-              name: dns-crypt-tcp
+              name: con-dns-crypt-tcp
             - protocol: UDP
               containerPort: 5443
               name: dns-crypt-udp
