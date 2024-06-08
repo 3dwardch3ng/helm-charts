@@ -5,7 +5,6 @@ metadata:
   name: tcp-services
   namespace: ingress-nginx
 data:
-  10080: "adguard-home/adguard-home:10080"
   13000: "adguard-home/adguard-home::13000"
   53: "adguard-home/adguard-home:53"
   853: "dguard-home/adguard-home:853"
