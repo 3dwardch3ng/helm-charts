@@ -19,23 +19,47 @@ spec:
           image: adguard/adguardhome:v0.107.50
           ports:
             - protocol: TCP
-              containerPort: 3000
-              name: http-setup
-            - protocol: TCP
-              containerPort: 80
-              name: http
+              containerPort: 53
+              name: dns-tcp
             - protocol: UDP
               containerPort: 53
               name: dns-udp
+            - protocol: UDP
+              containerPort: 67
+              name: dhcp-server-udp
+            - protocol: UDP
+              containerPort: 68
+              name: dhcp-client-udp
             - protocol: TCP
-              containerPort: 53
-              name: dns-tcp
+              containerPort: 80
+              name: main-tcp
+            - protocol: TCP
+              containerPort: 443
+              name: https-tcp
+            - protocol: UDP
+              containerPort: 443
+              name: https-udp
             - protocol: TCP
               containerPort: 853
-              name: dns-tls
+              name: dns-tls-quic-tcp
             - protocol: UDP
-              containerPort: 784
-              name: dns-quic
+              containerPort: 853
+              name: dns-tls-quic-udp
+            - protocol: TCP
+              containerPort: 3000
+              name: https-alt-tcp
+            - protocol: UDP
+              containerPort: 3000
+              name: https-alt-udp
+            - protocol: TCP
+              containerPort: 5443
+              name: dns-crypt-tcp
+            - protocol: UDP
+              containerPort: 5443
+              name: dns-crypt-udp
+            - protocol: TCP
+              containerPort: 6060
+              name: http-pprof-tcp
           volumeMounts:
             - name: adguard-home-data
               mountPath: /opt/adguardhome/work

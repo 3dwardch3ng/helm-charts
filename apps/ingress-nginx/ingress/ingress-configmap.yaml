@@ -16,4 +16,6 @@ metadata:
   namespace: ingress-nginx
 data:
   53: "adguard-home/adguard-home:53"
+  67: "adguard-home/adguard-home:67"
+  853: "adguard-home/adguard-home:853"
   784: "adguard-home/adguard-home:784"
