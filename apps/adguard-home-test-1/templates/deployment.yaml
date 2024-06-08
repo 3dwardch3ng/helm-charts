@@ -50,10 +50,10 @@ spec:
               name: con-http-alt-tcp
             - protocol: UDP
               containerPort: 3000
-              name: con-http-alt-udp
+              name: con-httpalt-udp
             - protocol: TCP
               containerPort: 5443
-              name: con-dns-crypt-tcp
+              name: con-dnscrypt-tcp
             - protocol: UDP
               containerPort: 5443
               name: dns-crypt-udp
