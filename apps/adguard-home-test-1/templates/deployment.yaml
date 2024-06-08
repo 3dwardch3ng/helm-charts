@@ -20,46 +20,46 @@ spec:
           ports:
             - protocol: TCP
               containerPort: 53
-              name: con-dns-tcp
+              name: c-dns-tcp
             - protocol: UDP
               containerPort: 53
-              name: con-dns-udp
+              name: c-dns-udp
             - protocol: UDP
               containerPort: 67
-              name: con-dhcp-svr
+              name: c-dhcp-svr
             - protocol: UDP
               containerPort: 68
               name: con-dhcp-clt
             - protocol: TCP
               containerPort: 80
-              name: con-main-tcp
+              name: c-main-tcp
             - protocol: TCP
               containerPort: 443
-              name: con-https-tcp
+              name: c-https-tcp
             - protocol: UDP
               containerPort: 443
-              name: con-https-udp
+              name: c-https-udp
             - protocol: TCP
               containerPort: 853
-              name: con-dns-tls-tcp
+              name: c-dns-tls-tcp
             - protocol: UDP
               containerPort: 853
-              name: con-dns-tls-udp
+              name: c-dns-tls-udp
             - protocol: TCP
               containerPort: 3000
-              name: con-http-alt-tcp
+              name: c-http-alt-tcp
             - protocol: UDP
               containerPort: 3000
-              name: con-httpalt-udp
+              name: c-httpalt-udp
             - protocol: TCP
               containerPort: 5443
-              name: con-dnscrypt-tcp
+              name: c-dnscrypt-tcp
             - protocol: UDP
               containerPort: 5443
-              name: dns-crypt-udp
+              name: c-dnscrypt-udp
             - protocol: TCP
               containerPort: 6060
-              name: http-pprof
+              name: c-http-pprof
           volumeMounts:
             - name: adguard-home-data
               mountPath: /opt/adguardhome/work
