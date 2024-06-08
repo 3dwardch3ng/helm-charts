@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: ingress-nginx-tcp
+  name: tcp-services
   namespace: ingress-nginx
 data:
   10080: "adguard-home/adguard-home-web-setup:10080"
@@ -13,7 +13,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: ingress-nginx-udp
+  name: udp-services
   namespace: ingress-nginx
 data:
   53: "adguard-home/adguard-home-dns-udp:53"
