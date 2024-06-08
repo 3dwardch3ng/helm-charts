@@ -41,10 +41,10 @@ spec:
               name: https-udp
             - protocol: TCP
               containerPort: 853
-              name: dns-tls-quic-tcp
+              name: dns-tls-tcp
             - protocol: UDP
               containerPort: 853
-              name: dns-tls-quic-udp
+              name: dns-tls-udp
             - protocol: TCP
               containerPort: 3000
               name: https-alt-tcp
