@@ -8,12 +8,3 @@ controller:
       http: 8080
       # -- Port the external HTTPS listener is published with.
       https: 10443
-tcp:
-  "13000": "adguard-home/adguard-home-web-setup:13000"
-  "10080": "adguard-home/adguard-home-web:10080"
-  "53": "adguard-home/adguard-home-dns-tcp:53"
-  "853": "adguard-home/adguard-home-dns-tls:853"
-
-udp:
-  "53": "adguard-home/adguard-home-dns-udp:53"
-  "784": "adguard-home/adguard-home-dns-quic:784"
