@@ -26,10 +26,10 @@ spec:
               name: con-dns-udp
             - protocol: UDP
               containerPort: 67
-              name: con-dhcp-svr-udp
+              name: con-dhcp-svr
             - protocol: UDP
               containerPort: 68
-              name: con-dhcp-clt-udp
+              name: con-dhcp-clt
             - protocol: TCP
               containerPort: 80
               name: con-main-tcp
@@ -59,7 +59,7 @@ spec:
               name: dns-crypt-udp
             - protocol: TCP
               containerPort: 6060
-              name: http-pprof-tcp
+              name: http-pprof
           volumeMounts:
             - name: adguard-home-data
               mountPath: /opt/adguardhome/work
