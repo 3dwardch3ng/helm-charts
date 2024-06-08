@@ -41,8 +41,6 @@ spec:
               mountPath: /opt/adguardhome/work
             - name: adguard-home-config
               mountPath: /opt/adguardhome/config
-            - name: adguard-home-root
-              mountPath: /opt/adguardhome/
       volumes:
         - name: adguard-home-data
           hostPath:
@@ -51,8 +49,4 @@ spec:
         - name: adguard-home-config
           hostPath:
             path: /mnt/nfs/AppData/adguardhome/conf
-            type: Directory
-        - name: adguard-home-root
-          hostPath:
-            path: /mnt/nfs/AppData/adguardhome/
             type: Directory
