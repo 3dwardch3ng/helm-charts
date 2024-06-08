@@ -26,10 +26,10 @@ spec:
               name: con-dns-udp
             - protocol: UDP
               containerPort: 67
-              name: con-dhcp-server-udp
+              name: con-dhcp-svr-udp
             - protocol: UDP
               containerPort: 68
-              name: con-dhcp-client-udp
+              name: con-dhcp-clt-udp
             - protocol: TCP
               containerPort: 80
               name: con-main-tcp
