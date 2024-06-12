@@ -22,7 +22,7 @@ version: 0.1.0
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-appVersion: "v0.107.51"
+appVersion: "v0.107.50"
 kubeVersion: ">=1.22.0-0"
 keywords:
   - adblock
@@ -33,7 +33,7 @@ sources:
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update adguard/adguardhome docker tag to v0.107.51
+      description: Update adguard/adguardhome docker tag to v0.107.50
   artifacthub.io/links: |-
     - name: App Source
       url: https://github.com/AdguardTeam/AdGuardHome

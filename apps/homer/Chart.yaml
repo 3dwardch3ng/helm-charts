@@ -1,8 +1,8 @@
 apiVersion: v2
-name: adguard-home
-description: Free and open source, powerful network-wide ads & trackers blocking DNS server.
-home: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/adguard-home
-icon: https://raw.githubusercontent.com/3dwardch3ng/helm-charts/main/charts/adguard-home/icon.svg
+name: homer
+description: A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
+home: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/homer/
+icon: https://raw.githubusercontent.com/bastienwirtz/homer/5609315/public/assets/icons/logo.svg
 # A chart can be either an 'application' or a 'library' chart.
 #
 # Application charts are a collection of templates that can be packaged into versioned archives
@@ -16,26 +16,31 @@ type: application
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.1.0
-# renovate datasource=docker depName=adguard/adguardhome
+# renovate datasource=docker depName=ghcr.io/bastienwirtz/homer
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
-appVersion: "v0.107.51"
+appVersion: "v24.05.1"
 kubeVersion: ">=1.22.0-0"
 keywords:
-  - adblock
-  - dns
-  - privacy
+  - homer
+  - dashboard
+  - startpage
+  - homepage
+dependencies:
+  - name: common
+    repository: https://bjw-s.github.io/helm-charts
+    version: 3.2.1
 sources:
-  - https://github.com/AdguardTeam/AdGuardHome
+  - https://github.com/bastienwirtz/homer
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update adguard/adguardhome docker tag to v0.107.51
+      description: update charts
   artifacthub.io/links: |-
     - name: App Source
-      url: https://github.com/AdguardTeam/AdGuardHome
+      url: https://github.com/bastienwirtz/homer
     - name: Chart Source
-      url: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/adguard-home
+      url: https://github.com/3dwardch3ng/helm-charts/tree/main/charts/homer

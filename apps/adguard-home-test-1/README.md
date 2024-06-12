@@ -4,7 +4,7 @@
 
 ![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
-![AppVersion: v0.107.51](https://img.shields.io/badge/AppVersion-v0.107.51-informational?style=flat)
+![AppVersion: v0.107.50](https://img.shields.io/badge/AppVersion-v0.107.50-informational?style=flat)
 
 Free and open source, powerful network-wide ads & trackers blocking DNS server.
 
@@ -23,7 +23,9 @@ Kubernetes: `>=1.22.0-0`
 
 ## Dependencies
 
-This chart has no dependencies.
+| Repository | Name | Version |
+|------------|------|---------|
+| <https://bjw-s.github.io/helm-charts> | common | 3.2.1 |
 
 ## Installing the Chart
 

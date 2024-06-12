@@ -1,0 +1,14 @@
+spec:
+  ports:
+    - appProtocol: http
+      name: http-web
+      nodePort: 32741
+      port: 10080
+      protocol: TCP
+      targetPort: 10080
+    - appProtocol: http
+      name: http-setup
+      nodePort: 32742
+      port: 13000
+      protocol: TCP
+      targetPort: 13000
