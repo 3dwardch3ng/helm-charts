@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/3dwardch3ng/helm-charts/main/charts/adguard-home/icon.svg" align="right" width="92" alt="adguard-home logo">
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat)
 ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat)
 ![AppVersion: v0.107.51](https://img.shields.io/badge/AppVersion-v0.107.51-informational?style=flat)
 
@@ -11,7 +11,7 @@ Free and open source, powerful network-wide ads & trackers blocking DNS server.
 **Homepage:** <https://github.com/3dwardch3ng/helm-charts/tree/main/charts/adguard-home>
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised
-[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardch3ng&labels=bug&template=bug_report.yaml&name=adguard-home&version=0.1.0)**
+[here](https://helm-charts.edward.sydney//issues/new?assignees=3dwardch3ng&labels=bug&template=bug_report.yaml&name=adguard-home&version=0.1.1)**
 
 ## Source Code
 
@@ -85,7 +85,7 @@ N/A
 | config | string | See [values.yaml](./values.yaml) | Default AdGuard Home config file.    This will only be copied if an existing config does not exist.    [[ref]](https://github.com/AdguardTeam/AdGuardHome/wiki/Configuration) |
 | controllers.main.containers.main.image.pullPolicy | string | `"IfNotPresent"` |  |
 | controllers.main.containers.main.image.repository | string | `"adguard/adguardhome"` |  |
-| controllers.main.containers.main.image.tag | string | `"v0.107.50"` |  |
+| controllers.main.containers.main.image.tag | string | `"v0.107.52"` |  |
 | controllers.main.enabled | bool | `true` |  |
 | controllers.main.replicas | int | `1` |  |
 | controllers.main.type | string | `"deployment"` |  |
