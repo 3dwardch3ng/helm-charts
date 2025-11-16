@@ -14,7 +14,7 @@ controllers:
       main:
         image:
           repository: ghcr.io/bastienwirtz/homer
-          tag: v24.05.1
+          tag: v25.11.1
           pullPolicy: IfNotPresent
 
 # -- environment variables.
